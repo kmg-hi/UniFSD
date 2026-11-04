@@ -16,6 +16,6 @@ Previous short name: Public Optical v1. The name change does not alter membershi
 - Intended reuse: detection-data curation and clearly scoped RGB baselines.
 - Not a paired thermal dataset and not the paired-release optic-only benchmark.
 - Candidate-release origin, publication version/DOI/licence: not finalised.
-- Access now: author-approved PRIVATE ZIP transfer in progress; not a public release.
+- Access now: author-approved PRIVATE upload complete; eight verified ZIP parts. Not a public release.
 - Annotation accuracy, sensitive-image review, upstream component rights and
   representativeness require documented checks before release.

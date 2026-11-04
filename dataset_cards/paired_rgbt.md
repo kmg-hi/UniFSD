@@ -29,8 +29,8 @@ kept separate. The PRIVATE transfer manifest contains actual canonical label
 hashes restored from the frozen training artifact and checked against each
 original hash; older metadata-only previews left these hashes blank.
 Sensor/acquisition metadata, real capture rights/ethics and Unity asset
-permissions remain pending. The authorised PRIVATE ZIP transfer is in progress,
-not a public release.
+permissions remain pending. The authorised PRIVATE upload is complete with
+17 verified ZIP parts; it is not a public release.
 
 ICAFusion's exclusion from a requested model comparison does not remove any
 dataset samples, source annotations or completed experiment artefacts.

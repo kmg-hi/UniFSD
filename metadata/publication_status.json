@@ -1,14 +1,14 @@
 {
   "publication_ready": false,
-  "stage": "authorised_private_upload_in_progress_not_public_release",
+  "stage": "authorised_private_upload_complete_not_public_release",
   "reviewed_at": null,
   "reviewed_by": null,
   "blockers": [
     {"id": "source_rights", "resolved": false, "evidence": null, "action": "Verify component-level redistribution rights; retain original terms and attribution."},
     {"id": "real_capture_ethics_privacy", "resolved": false, "evidence": null, "action": "Institutional ethics/consent assessment and actual image privacy/security review."},
     {"id": "unity_asset_rights", "resolved": false, "evidence": null, "action": "Audit rendered-output and asset/source redistribution rights separately."},
-    {"id": "canonical_payload", "resolved": false, "evidence": null, "action": "Stage actual frozen images, source labels and derived training labels; verify bytes and counts."},
-    {"id": "derived_label_provenance", "resolved": false, "evidence": null, "action": "Export existing canonical derived labels and hashes without regenerating frozen GT."},
+    {"id": "canonical_payload", "resolved": true, "evidence": "metadata/private_transfer_status.json: all 352421 payload files, 25 ZIP parts and 31 remote asset digests verified; private transfer only, not public rights clearance.", "action": "Preserve this verified version and resolve the separate public-release reviews."},
+    {"id": "derived_label_provenance", "resolved": true, "evidence": "paired_RGBT/metadata/private_transfer.json: 35859 canonical label byte records restored from frozen artifact SHA256 3183f09b06050e1eac9ec6abfa8676ff808d071fd66408a60e80775db81b7e14, original hashes matched, 71718 modality files retained; no box recomputation.", "action": "Retain original/source versus canonical training label distinctions and provenance."},
     {"id": "annotation_quality", "resolved": false, "evidence": null, "action": "Document annotation protocol, model versions, review coverage and uncertainty."},
     {"id": "acquisition_metadata", "resolved": false, "evidence": null, "action": "Confirm sensor/acquisition/scene/Unity versions and calibration details."},
     {"id": "portable_processing_code", "resolved": false, "evidence": null, "action": "Port original processing pipeline, audit code licences, pin and test environments."},

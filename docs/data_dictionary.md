@@ -57,7 +57,7 @@ assisted; do not describe all labels as independently human-drawn ground truth.
 
 ## Other records
 
-- `summary.json`: counts recomputed from exported manifest; source counts labelled.
+- `summary.json`: counts recomputed from exported manifest; source counts labelled. Its `payload_files_verified_now: false` is preserved from the earlier metadata-only export, not the status of the completed private ZIP transfer; see the separate private-transfer verification record.
 - `source_*`: selected historical metadata; historical validation is not a new audit.
 - `build_provenance.json`: input metadata hashes, redaction notes and export scope.
 - `metadata_preview_build_provenance.json`: preserved earlier paired metadata-export receipt before canonical training hashes were added.
@@ -75,6 +75,8 @@ validity/parallax warning. The legacy canvas-fit section is diagnostic and is
 explicitly marked invalid as calibration. Native thermal dimensions in this
 record are not the dimensions of the processed registered thermal files; use
 the manifest's per-view dimensions for the retained images.
+The transforms document the existing processing, not an instruction to apply
+registration again to already registered images or to all real-capture pairs.
 
 `classes.json` gives the shared ID mapping. Machine-readable field allowlists are
 in `schemas/`; the validator implements these fields and additional invariants

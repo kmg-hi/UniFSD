@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "preparation_date": "2026-10-30",
-  "stage": "local_metadata_preparation_only",
+  "stage": "private_transfer_complete_public_release_pending",
   "github_url": "https://github.com/kmg-hi/unified-fire-smoke-datasets",
   "software_version": null,
   "software_doi": null,

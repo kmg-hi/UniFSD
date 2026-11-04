@@ -1,28 +1,237 @@
 {
-  "checked_at": "2026-11-04T16:19:18+09:00",
+  "checked_at": "2026-11-04T16:53:05.636431+09:00",
   "repository": "https://github.com/kmg-hi/unified-fire-smoke-datasets",
   "visibility": "private",
-  "stage": "upload_in_progress",
+  "stage": "private_upload_complete_public_release_pending",
   "public_release": false,
   "publication_clearance": false,
+  "all_required_assets_uploaded_and_verified": true,
   "transfer_method": "Independent numbered ZIP parts attached to unpublished private drafts; extract all parts into one parent directory",
   "datasets": {
     "public_optical_release_v1": {
       "directory": "public optical",
+      "release_id": 433610304,
+      "draft_url": "https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b",
+      "draft": true,
+      "private": true,
+      "asset_count": 11,
+      "zip_parts": 8,
       "payload_files": 173126,
       "payload_bytes": 10400496335,
-      "planned_zip_parts": 8,
-      "draft_url": "https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b"
+      "archive_members": 173143,
+      "archive_bytes": 10506254921,
+      "server_digests_verified": true,
+      "all_source_and_extracted_member_hashes_verified": true,
+      "unknown_extra_assets": [],
+      "assets": [
+        {
+          "name": "public-optical-v1-archives.json",
+          "size": 2136,
+          "digest": "sha256:79b0a9eb83f60594455de4d67a45a673ac47161c4e713ac6020f419c7e693c37",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-DOWNLOAD.md",
+          "size": 1122,
+          "digest": "sha256:acf6e22cd4c0587e0d1b822a59f9493786931b27c0a22d667bcee2d9a0acb085",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-part0001.zip",
+          "size": 1367289748,
+          "digest": "sha256:85480f0539f27be3f559fece1ea7910db450d01f9bf96086cb4f7a30212e0c62",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-part0002.zip",
+          "size": 1424603464,
+          "digest": "sha256:6e4e0ef8be80065765ff2f01d90736601ffc4c41efffd04c3d5d12a87010c671",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-part0003.zip",
+          "size": 1422592309,
+          "digest": "sha256:5c3f022d9468aae6f2d86ec3692ebe3daeec0e262424cd302e4a1a7a46080a38",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-part0004.zip",
+          "size": 1418859279,
+          "digest": "sha256:563f72d2cadb7b198564daec9ba7719cf0263a332fa7c08a011a7230785329ca",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-part0005.zip",
+          "size": 1421301915,
+          "digest": "sha256:bef0466b6dd3a1f51e49617c8fba085502f06911183babdcd715273d69b83025",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-part0006.zip",
+          "size": 1394121399,
+          "digest": "sha256:2fe5473a452e0b3bf412f3957b75e5533f2ce9c5fa6d0fe0a52c76da6007e14d",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-part0007.zip",
+          "size": 1369483291,
+          "digest": "sha256:c19665397f32aed6c0dbaa274363ef12cd56329f808fe86c9b1953ca0f96c4fa",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-part0008.zip",
+          "size": 688003516,
+          "digest": "sha256:d0d1c182c684225511270881dedb8f9a8eb67a0c3f89cb748d76ac2c288dfaf6",
+          "state": "uploaded"
+        },
+        {
+          "name": "public-optical-v1-SHA256SUMS.txt",
+          "size": 776,
+          "digest": "sha256:177fce44459adf8b960b14b52971fe7abe59def84552da729544cb30da9222d8",
+          "state": "uploaded"
+        }
+      ]
     },
     "paired_rgbt_v1": {
       "directory": "paired_RGBT",
+      "release_id": 433615143,
+      "draft_url": "https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6",
+      "draft": true,
+      "private": true,
+      "asset_count": 20,
+      "zip_parts": 17,
       "payload_files": 179295,
       "payload_bytes": 23955151228,
-      "planned_zip_parts": 17,
-      "draft_url": "https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6"
+      "archive_members": 179311,
+      "archive_bytes": 24063127217,
+      "server_digests_verified": true,
+      "all_source_and_extracted_member_hashes_verified": true,
+      "unknown_extra_assets": [],
+      "assets": [
+        {
+          "name": "paired-rgbt-v1-archives.json",
+          "size": 4191,
+          "digest": "sha256:ac6abbbdddc1d7f91d4432de7bceab0c75e03ebce6b9c0c53e1a952de98d2b4c",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-DOWNLOAD.md",
+          "size": 1114,
+          "digest": "sha256:5299d0046de7db23c36d9d40a0d97bca55f01b05d4f4ab8eabc8246e99554400",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0001.zip",
+          "size": 1118100052,
+          "digest": "sha256:4659f2d64adc237024f981dc9c29a3c9c3cf7e34a72ba7afa1c941257521cffb",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0002.zip",
+          "size": 1343326935,
+          "digest": "sha256:13b07c52136cd5a6dde1e34e64ed2a7ea5a627c2ffc26c47876f9cdfe87c409f",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0003.zip",
+          "size": 1484855983,
+          "digest": "sha256:3b77286bef7fd9180b0990cc2a5edf3619511b930db6f5cbdb0b8e71da490542",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0004.zip",
+          "size": 1480397071,
+          "digest": "sha256:54b28ba11207f6375d5c17f5b4e729dbe08909be2c984a7ce7a670c70c859b68",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0005.zip",
+          "size": 1490204292,
+          "digest": "sha256:62597c55f511c61f88252c6dcf3a38125b33b8d41ef88285fa647166a7a638fc",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0006.zip",
+          "size": 1510427761,
+          "digest": "sha256:676468b7f14d4c943dc445b609052c0aa00ba0b979b25d6d7e595e2f8f98c5ef",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0007.zip",
+          "size": 1515777097,
+          "digest": "sha256:27e2fd0c029e084c6713ffa46c93488075a799c65daadc2c50af79a66e5ce7e4",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0008.zip",
+          "size": 1509167727,
+          "digest": "sha256:5af0c7e7bcfa2471802930cee5184b9f7996cb0891a713fcb226fee9ccaef218",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0009.zip",
+          "size": 1515987434,
+          "digest": "sha256:7e3306322b68d8c95ad968cd1e13b82dd70926eae4a2df481d08bddca34b18f4",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0010.zip",
+          "size": 1521409850,
+          "digest": "sha256:851f2aceab7f8a615910ed6cbbd44528c50c93e87fbf414fac47faa6a8620947",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0011.zip",
+          "size": 1532373615,
+          "digest": "sha256:e863b8b59bcc603c2ee7b5e296e2c15bc60faeef1c1363cab3164a18ddafc367",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0012.zip",
+          "size": 1534853563,
+          "digest": "sha256:28b87900b00be5761a2eb47f4db57f65d3490c2945bf58c23eb7523739ffc73d",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0013.zip",
+          "size": 1533244271,
+          "digest": "sha256:36120255f293aa07ce9b00088820322a88ca9c14e33ae8e8abb29c0524be2f6c",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0014.zip",
+          "size": 1530380648,
+          "digest": "sha256:b3217ccdf1a4ea6971c90f46a8dcfe8ebd4aca1cc2a51f9b88b6fe91513c0251",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0015.zip",
+          "size": 1534254362,
+          "digest": "sha256:cd1091f7ce7b52c8007cb0be3d1535d01ced8789d63a96471a93c2f99f2f80d8",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0016.zip",
+          "size": 1533457908,
+          "digest": "sha256:4aff1b5970538abfc654b887af1c84576414cf78b16b156feaab99faa9585a9b",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-part0017.zip",
+          "size": 374908648,
+          "digest": "sha256:1db51be7afa6036d873776c322940c83ce64419b64a124facb25406815c5dd49",
+          "state": "uploaded"
+        },
+        {
+          "name": "paired-rgbt-v1-SHA256SUMS.txt",
+          "size": 1598,
+          "digest": "sha256:1cd299f04d7f206be627477d3957d36d12d5d6a9f0791dd25c4e3e636c6bf62e",
+          "state": "uploaded"
+        }
+      ]
     }
   },
-  "verification": "Each uploaded ZIP part must pass source SHA-256, archived-member extraction SHA-256, and remote asset size/state/digest checks. Partial upload is not completion.",
+  "verification": "Every source file and every archived member was SHA-256 checked. All 31 remote assets match local sizes and SHA-256 values. Frozen original manifests, sample membership, label bytes and split assignments are unchanged.",
   "membership_changed": false,
   "labels_regenerated": false,
   "paid_storage_enabled": false

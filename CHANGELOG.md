@@ -5,7 +5,8 @@
 - Added manifest-only source inventories, original canonical-label byte restoration, bounded ZIP packaging and unpublished private-draft upload utilities.
 - Preserved original sample membership, source images/labels, canonical training bytes, record IDs and frozen splits.
 - Added per-source, archive extraction and remote asset SHA-256 verification; kept private inputs and raw operational artifacts out of Git.
-- Private transfer is in progress; no public release, DOI, final licence, paid LFS or automatic workflow is enabled.
+- Completed the PRIVATE transfer: 8 single-modal and 17 paired ZIP parts plus six catalog/checksum/instruction assets, all verified against server SHA-256 values.
+- No public release, DOI, final licence, paid LFS or automatic workflow is enabled.
 
 ## Release root folders - 2026-11-04
 

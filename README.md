@@ -9,8 +9,8 @@ This project brings together two distinct fire and smoke detection resources:
 
 This private preparation repository is being assembled for documentation,
 metadata, validation utilities, and the original retained image and annotation
-files of both datasets. The author-approved private data transfer is in progress.
-The project title, authors, licences, download locations, and citation identifiers
+files of both datasets. The author-approved private data transfer is complete.
+The project title, authors, licences, public download locations, and citation identifiers
 have not yet been finalised. The folder names below describe the planned release
 layout, not a claim that the image and annotation payloads are already available.
 
@@ -65,20 +65,22 @@ use the same pair membership, frozen splits, and common derived targets.
 
 | Resource | Current status | Download / identifier |
 |---|---|---|
-| unified single-modal optical dataset archives | Private ZIP transfer in progress; not publicly released | [Private draft assets](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases) |
-| multi-modal optical–thermal paired dataset archives | Private ZIP preparation/transfer in progress; not publicly released | [Private draft assets](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases) |
+| unified single-modal optical dataset archives | Private upload complete: 8 verified ZIP parts; not publicly released | [Private draft assets](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b) |
+| multi-modal optical–thermal paired dataset archives | Private upload complete: 17 verified ZIP parts; not publicly released | [Private draft assets](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6) |
 | Dataset version DOIs | Not assigned | Not assigned |
 | Paper | Manuscript preparation | Not assigned |
 
 The repository's `public optical/` and `paired_RGBT/` directories contain the
 dataset metadata, frozen split lists, and payload inventories. The actual retained
-images, source annotations, and canonical training annotations are transferred as
+images, source annotations, and canonical training annotations are available as
 independently readable ZIP parts attached to unpublished drafts in this same
 private repository, not as ordinary Git blobs or metered Git LFS objects.
 Download all numbered parts for a dataset, verify their archive checksums, and
 extract every part into the same parent directory. Do not concatenate the ZIPs.
-The transfer is incomplete until every numbered part, archive catalog, checksum
-file, and download note is attached and verified. No paid capacity is enabled.
+Both private transfers are complete: all 25 ZIP parts and six archive-catalog,
+checksum and download-note assets were uploaded and their server SHA-256 values
+verified. They cover 352,421 frozen image/annotation files, plus metadata. No paid
+capacity is enabled. Verification is recorded in `metadata/private_transfer_status.json`.
 Private draft locations:
 [public optical](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b),
 [paired_RGBT](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6).
@@ -87,7 +89,7 @@ licences, a suitable persistent dataset record, and version-specific identifiers
 
 ## Intended repository layout
 
-Companion documentation and metadata are being assembled in the directories
+Companion documentation and metadata are provided in the directories
 below. Image and annotation payloads are in the separate private ZIP attachments.
 
 ```text
