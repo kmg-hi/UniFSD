@@ -23,8 +23,10 @@ layout, not a claim that the image and annotation payloads are already available
 
 The publication-facing names were updated on 2026-11-04. The stable record
 identifiers remain `public_optical_release_v1` and `paired_rgbt_v1`, respectively.
+Their release root directories are `public optical/` and `paired_RGBT/`,
+respectively; these folder names are distinct from the stable record identifiers.
 Public Optical and Paired RGB-T are previous short names used in historical
-documentation; the renaming does not change files, annotations, or split membership.
+documentation; the renaming does not change file contents, annotations, or split membership.
 
 ### unified single-modal optical dataset
 
@@ -106,7 +108,7 @@ separate, storage-aware transfer step rather than an unreviewed regular-Git push
 The two dataset archives are separate from the companion repository:
 
 ```text
-public_optical_release_v1/
+public optical/
   README.md
   images/{train,val,test}/
   labels/{train,val,test}/
@@ -118,7 +120,7 @@ public_optical_release_v1/
   splits/{train,val,test}.txt
   SHA256SUMS_METADATA.txt
 
-paired_rgbt_v1/
+paired_RGBT/
   README.md
   dataset/{real,synthetic}/{experiment}/
     pair_optic/
@@ -136,6 +138,9 @@ paired_rgbt_v1/
 ```
 
 Image and annotation directories in this tree are **not staged yet**.
+Paths inside each manifest are relative to its dataset root. Quote paths containing
+the space in `public optical` when using command-line tools. Preparation scripts
+still accept stable record identifiers and resolve folder names from `metadata/release_plan.json`.
 `SHA256SUMS_METADATA.txt` covers the metadata preview only; full payload and
 archive checksums must be supplied separately when the data are packaged.
 
