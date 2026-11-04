@@ -9,7 +9,7 @@ This project brings together two distinct fire and smoke detection resources:
 
 This private preparation repository is being assembled for documentation,
 metadata, validation utilities, and the original retained image and annotation
-files of both datasets. Bulk data transfer and storage checks are still pending.
+files of both datasets. The author-approved private data transfer is in progress.
 The project title, authors, licences, download locations, and citation identifiers
 have not yet been finalised. The folder names below describe the planned release
 layout, not a claim that the image and annotation payloads are already available.
@@ -65,25 +65,30 @@ use the same pair membership, frozen splits, and common derived targets.
 
 | Resource | Current status | Download / identifier |
 |---|---|---|
-| unified single-modal optical dataset archives | Payload not staged for publication; rights review pending | Not assigned |
-| multi-modal optical–thermal paired dataset archives | Payload and canonical derived labels not staged for publication | Not assigned |
+| unified single-modal optical dataset archives | Private ZIP transfer in progress; not publicly released | [Private draft assets](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases) |
+| multi-modal optical–thermal paired dataset archives | Private ZIP preparation/transfer in progress; not publicly released | [Private draft assets](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases) |
 | Dataset version DOIs | Not assigned | Not assigned |
 | Paper | Manuscript preparation | Not assigned |
 
-Only metadata and frozen split lists have been exported into the local
-`data_deposit/` preparation folders. This does not make them complete datasets.
-The approved private-repository scope includes the retained images, source
-annotations, and canonical derived training labels, in addition to documentation,
-code, and metadata. These dataset payloads have not been uploaded. The transfer
-method, label availability, and storage quota must be checked before bulk upload;
-paid capacity will not be enabled without approval. A future public release also
-requires a suitable persistent dataset record, verified licences, archive sizes,
-checksums, and extraction instructions.
+The repository's `public optical/` and `paired_RGBT/` directories contain the
+dataset metadata, frozen split lists, and payload inventories. The actual retained
+images, source annotations, and canonical training annotations are transferred as
+independently readable ZIP parts attached to unpublished drafts in this same
+private repository, not as ordinary Git blobs or metered Git LFS objects.
+Download all numbered parts for a dataset, verify their archive checksums, and
+extract every part into the same parent directory. Do not concatenate the ZIPs.
+The transfer is incomplete until every numbered part, archive catalog, checksum
+file, and download note is attached and verified. No paid capacity is enabled.
+Private draft locations:
+[public optical](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b),
+[paired_RGBT](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6).
+A future public release still requires component rights/privacy review, final
+licences, a suitable persistent dataset record, and version-specific identifiers.
 
 ## Intended repository layout
 
-Only the initial README is being uploaded in this step. The directories below
-are not a claim that the complete repository or dataset payload is already present.
+Companion documentation and metadata are being assembled in the directories
+below. Image and annotation payloads are in the separate private ZIP attachments.
 
 ```text
 README.md                         Dataset introduction and access information
@@ -95,6 +100,8 @@ scripts/                          Metadata preparation and validation utilities
 tests/                            Tests for the preparation utilities
 templates/                        Unfinished citation and deposit metadata templates
 LICENSES/                         Licensing guidance; final terms still pending
+public optical/                   Single-modal metadata, splits, and payload inventory
+paired_RGBT/                      Paired metadata, splits, registration, and payload inventory
 ```
 
 This README remains a preparation draft, not a dataset release announcement.
@@ -137,12 +144,15 @@ paired_RGBT/
   SHA256SUMS_METADATA.txt
 ```
 
-Image and annotation directories in this tree are **not staged yet**.
+Image and annotation directories appear after all private ZIP parts are extracted;
+they are not included as ordinary Git files in the repository tree.
 Paths inside each manifest are relative to its dataset root. Quote paths containing
 the space in `public optical` when using command-line tools. Preparation scripts
 still accept stable record identifiers and resolve folder names from `metadata/release_plan.json`.
-`SHA256SUMS_METADATA.txt` covers the metadata preview only; full payload and
-archive checksums must be supplied separately when the data are packaged.
+`SHA256SUMS_METADATA.txt` covers metadata only. `PAYLOAD_FILES.csv` records the
+payload paths, sizes, and expected hashes; the separate archive catalogs and
+`*-SHA256SUMS.txt` files record verified ZIP parts. Metadata alone does not prove
+that the entire transfer has completed.
 
 ## Sample identifiers and correspondence
 
@@ -191,10 +201,12 @@ for the common training targets. Source and training annotation files must not b
 silently substituted for one another.
 
 `source_label_sha256` records source-label integrity. The separate
-`training_label_sha256` field is currently blank for all 35,859 pairs; it must be
-populated from the existing canonical training files, not copied from source
-hashes or filled by regenerating ground truth. Synthetic annotations were model
-assisted; the full annotation and review protocol remains to be documented.
+`training_label_sha256` field in the private-transfer manifest is populated from
+the existing frozen training artifact, with every restored label's bytes checked
+against its original SHA-256. Older metadata-only previews left this field blank.
+Source hashes were not substituted and ground truth was not regenerated.
+Synthetic annotations were model assisted; the full annotation and review
+protocol remains to be documented.
 
 ## Frozen dataset partitions
 
@@ -222,8 +234,10 @@ python -B scripts/validate_release.py --mode scaffold
 python -B scripts/validate_release.py --mode metadata
 ```
 
-Metadata validation requires the local metadata preview; cloning the companion
-repository alone will not supply `data_deposit/`, which is excluded from Git.
+Metadata validation uses the two dataset root folders when present in the
+repository; the earlier local `data_deposit/` layout is also supported.
+Cloning the repository does not supply the actual image/annotation payloads:
+download and extract every private ZIP part before requesting payload verification.
 See the [reproduction and release notes](docs/reproduction_and_release.md) for
 the preparation workflow. Source paths and local configuration must never be
 published with the repository.

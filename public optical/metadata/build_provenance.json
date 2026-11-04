@@ -1,0 +1,21 @@
+{
+  "stage": "metadata_only_not_a_data_release",
+  "source_metadata_sha256": {
+    "manifest.csv": "4233d7c993467e2640fbd971e6c23907d1b5c68696fb215275a0103483d48ef4",
+    "file_checksums_sha256.csv": "75352f007209d5ea23ff2db1994694a43ed3be89b97d2525f469f05998215d47",
+    "source_registry.csv": "dd5bbc72247d298197b6662b399ff51063e0bbb8b603c40ebe0be44334a91148",
+    "license_provenance.csv": "54ebc92bb0246a701a8cdd6bdc340b7fb78b12c901b81075555f4ee693038a7f",
+    "split_summary.json": "61ce10b8dfd2133fc0bf132d174a65f8d70dcecaecd86e16cb465d2e0b7177dc",
+    "deduplication_config.json": "721fd192556cea8aa76b5956721c99f530fb0ae3428130d5e500207eb745d462"
+  },
+  "export_manifest_sha256": "a27433c4c3e02533b7fcf0e6f3e4330148d657e963f672456796e399b4d0f231",
+  "media_copied": false,
+  "labels_rewritten": false,
+  "source_payload_rehashed_now": false,
+  "splits_regenerated": false,
+  "derived_training_labels_staged": false,
+  "redactions": [
+    "Private local/remote operational path fields are excluded by allowlist."
+  ],
+  "rights_status": "Recorded source terms are not current component-level clearance."
+}

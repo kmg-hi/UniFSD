@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-04T16:19:18+09:00",
+  "repository": "https://github.com/kmg-hi/unified-fire-smoke-datasets",
+  "visibility": "private",
+  "stage": "upload_in_progress",
+  "public_release": false,
+  "publication_clearance": false,
+  "transfer_method": "Independent numbered ZIP parts attached to unpublished private drafts; extract all parts into one parent directory",
+  "datasets": {
+    "public_optical_release_v1": {
+      "directory": "public optical",
+      "payload_files": 173126,
+      "payload_bytes": 10400496335,
+      "planned_zip_parts": 8,
+      "draft_url": "https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b"
+    },
+    "paired_rgbt_v1": {
+      "directory": "paired_RGBT",
+      "payload_files": 179295,
+      "payload_bytes": 23955151228,
+      "planned_zip_parts": 17,
+      "draft_url": "https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6"
+    }
+  },
+  "verification": "Each uploaded ZIP part must pass source SHA-256, archived-member extraction SHA-256, and remote asset size/state/digest checks. Partial upload is not completion.",
+  "membership_changed": false,
+  "labels_regenerated": false,
+  "paid_storage_enabled": false
+}

@@ -1,0 +1,82 @@
+{
+  "version": "v1.0-candidate",
+  "images": {
+    "FASDD_CV": {
+      "train": 52549,
+      "total": 66480,
+      "fire_and_smoke": 12595,
+      "val": 6590,
+      "test": 7341,
+      "fire_only": 7420,
+      "none": 36761,
+      "smoke_only": 9704
+    },
+    "D-Fire": {
+      "train": 4983,
+      "total": 6288,
+      "none": 4551,
+      "test": 784,
+      "smoke_only": 934,
+      "fire_and_smoke": 593,
+      "fire_only": 210,
+      "val": 521
+    },
+    "CQU": {
+      "train": 5043,
+      "total": 6244,
+      "fire_and_smoke": 1662,
+      "fire_only": 2335,
+      "val": 611,
+      "smoke_only": 2245,
+      "test": 590,
+      "none": 2
+    },
+    "Roboflow_FireSmoke": {
+      "train": 5900,
+      "total": 7551,
+      "smoke_only": 2027,
+      "fire_and_smoke": 4555,
+      "fire_only": 919,
+      "val": 992,
+      "test": 659,
+      "none": 50
+    }
+  },
+  "boxes": {
+    "FASDD_CV": {
+      "smoke": 28706,
+      "fire": 49364
+    },
+    "D-Fire": {
+      "smoke": 1654,
+      "fire": 1759
+    },
+    "CQU": {
+      "fire": 7931,
+      "smoke": 6756
+    },
+    "Roboflow_FireSmoke": {
+      "smoke": 7894,
+      "fire": 8215
+    }
+  },
+  "totals": {
+    "images": 86563,
+    "train": 68475,
+    "val": 8714,
+    "test": 9374,
+    "none": 41364,
+    "fire_boxes": 67269,
+    "smoke_boxes": 45010
+  },
+  "split_seed": 20260924,
+  "split_ratios": [
+    0.8,
+    0.1,
+    0.1
+  ],
+  "group_span": 100,
+  "groups": 5845,
+  "groups_crossing_splits": 0,
+  "removed_duplicate_rows": 49742
+}

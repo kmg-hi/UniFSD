@@ -1,0 +1,9 @@
+dataset_id,split,samples,real_pairs,synthetic_pairs,unit
+public_optical_release_v1,train,68475,,,RGB_image
+public_optical_release_v1,val,8714,,,RGB_image
+public_optical_release_v1,test,9374,,,RGB_image
+public_optical_release_v1,total,86563,,,RGB_image
+paired_rgbt_v1,train,28811,12190,16621,optical_thermal_pair
+paired_rgbt_v1,val,3524,1524,2000,optical_thermal_pair
+paired_rgbt_v1,test,3524,1524,2000,optical_thermal_pair
+paired_rgbt_v1,total,35859,15238,20621,optical_thermal_pair

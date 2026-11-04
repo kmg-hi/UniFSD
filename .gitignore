@@ -1,0 +1,25 @@
+# Never commit bulk research data or private operational configuration.
+/.local/
+/data_deposit/
+/archives/
+__pycache__/
+*.py[cod]
+.venv*/
+.env
+.env.*
+*.pem
+*.key
+*.pt
+*.pth
+*.pdparams
+*.pdopt
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.avi

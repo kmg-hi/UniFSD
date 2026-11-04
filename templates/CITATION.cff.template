@@ -1,0 +1,12 @@
+# INCOMPLETE TEMPLATE. Do not rename until authors, URL, version and licence agree.
+cff-version: 1.2.0
+message: "Please cite the final versioned software and the dataset records used."
+type: software
+title: "Fire and smoke dataset companion code and documentation"
+authors: []
+# version: supply actual release tag
+# date-released: supply actual release date
+# repository-code: supply actual public repository URL
+# doi: supply software VERSION DOI, not a guessed article DOI
+# license: supply approved software licence identifier
+# Dataset records need their own creator lists, version DOIs and citations.

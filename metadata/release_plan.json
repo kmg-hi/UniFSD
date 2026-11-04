@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "preparation_date": "2026-10-30",
+  "stage": "local_metadata_preparation_only",
+  "github_url": "https://github.com/kmg-hi/unified-fire-smoke-datasets",
+  "software_version": null,
+  "software_doi": null,
+  "code_license": null,
+  "authors": [],
+  "datasets": {
+    "public_optical_release_v1": {
+      "title": "unified single-modal optical dataset",
+      "directory": "public optical",
+      "version": "v1-publication-draft",
+      "doi": null,
+      "license": null,
+      "expected_samples": 86563,
+      "expected_splits": {"train": 68475, "val": 8714, "test": 9374},
+      "expected_sources": {"FASDD_CV": 66480, "D-Fire": 6288, "CQU": 6244, "Roboflow_FireSmoke": 7551},
+      "expected_groups": 5845,
+      "expected_boxes": {"fire": 67269, "smoke": 45010},
+      "expected_negative_images": 41364,
+      "source_manifest_sha256": "4233d7c993467e2640fbd971e6c23907d1b5c68696fb215275a0103483d48ef4"
+    },
+    "paired_rgbt_v1": {
+      "title": "multi-modal optical–thermal paired dataset",
+      "directory": "paired_RGBT",
+      "version": "v1-publication-draft",
+      "doi": null,
+      "license": null,
+      "expected_samples": 35859,
+      "expected_splits": {"train": 28811, "val": 3524, "test": 3524},
+      "expected_domains": {"real": 15238, "synthetic": 20621},
+      "expected_groups": 87,
+      "expected_source_boxes": {"fire": 49361, "smoke": 32363},
+      "source_manifest_sha256": "8f10fb98b629b6ce04be3945efaac55b288cba57500664591af2b56e20ae97a7"
+    }
+  }
+}

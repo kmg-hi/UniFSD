@@ -1,0 +1,8 @@
+source_id,applies_to,recorded_license,publication_clearance,evidence_url,required_action
+FASDD_CV,public_optical,CC-BY-SA-4.0,PENDING,https://doi.org/10.57760/sciencedb.j00104.00103,Verify exact input version and licence; preserve attribution and applicable ShareAlike terms; assess secondary-data journal exception
+D-Fire,public_optical,CC0-1.0 collection record only,PENDING,https://github.com/gaia-solutions-on-demand/DFireDataset,Audit PublicDataset components and original HPWREN/FIGLib FESB FireNet terms; collection record does not clear each image
+CQU,public_optical,CC-BY-4.0-CQU local alias,PENDING,https://doi.org/10.25946/28747046.v1,Reconfirm versioned licence evidence and contributor attribution
+Roboflow_FireSmoke,public_optical,CC-BY-4.0-ROBOFLOW local alias,PENDING,https://universe.roboflow.com/new2firedataset/newfire2,Preserve acquired README evidence; resolve actual creator attribution and upstream image rights
+real_capture,paired_rgbt,UNDECIDED,PENDING,,Confirm capture ownership permissions privacy ethics and institution-approved licence
+unity_synthetic,paired_rgbt,UNDECIDED,PENDING,,Audit all Unity assets and rendered-output rights separately from project source sharing
+derived_annotations,both,UNDECIDED,PENDING,,Determine annotation rights and derivative obligations; preserve source and actual derived GT separately

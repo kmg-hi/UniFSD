@@ -1,0 +1,32 @@
+{
+  "stage": "private_transfer_manifest_not_public_release",
+  "source_metadata_sha256": {
+    "pairs.jsonl": "8f10fb98b629b6ce04be3945efaac55b288cba57500664591af2b56e20ae97a7",
+    "split_summary.json": "35019087d626a41f25a3fd30da5146a097433e86d9e217a4c1c72ba98ad654f0",
+    "registration_config.json": "cbb030d1b82c6694aecb150ff3d34c04ce52cfb4352d58442f22e1de930cb2b6",
+    "validation.json": "cb6060540170c5600c654f0ac26de0dda7c53a22a2ac8a7963ab7f2822eb2f63"
+  },
+  "export_manifest_sha256": "ae81e7bf0bc06deb6b07cb9e5fccf0076bb22dca7dad1e93dc9babe4f8f0f98a",
+  "media_copied": false,
+  "labels_rewritten": false,
+  "source_payload_rehashed_now": false,
+  "splits_regenerated": false,
+  "derived_training_labels_staged": true,
+  "redactions": [
+    "Private local/remote operational path fields are excluded by allowlist.",
+    "calibration_source.path removed from registration configuration."
+  ],
+  "rights_status": "Recorded source terms are not current component-level clearance.",
+  "previous_export_manifest_sha256": "9278ab38de8fd7180c0d7883c31f593c0a3b2856a0ce59cf9622b730a9e2d722",
+  "canonical_training_provenance": {
+    "artifact_sha256": "3183f09b06050e1eac9ec6abfa8676ff808d071fd66408a60e80775db81b7e14",
+    "source_manifest_sha256": "8f10fb98b629b6ce04be3945efaac55b288cba57500664591af2b56e20ae97a7",
+    "pairs": 35859,
+    "label_files": 71718,
+    "method": "Copy existing UTF-8 label bytes from the frozen adapter artifact; verify every original label_sha256",
+    "relabelled": false,
+    "boxes_recomputed": false,
+    "splits_changed": false
+  },
+  "payload_verification_note": "See the separately verified archive catalog; metadata alone is not payload completion."
+}

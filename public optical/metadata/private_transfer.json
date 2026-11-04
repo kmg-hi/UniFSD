@@ -1,0 +1,15 @@
+{
+  "purpose": "authorised_private_transfer_not_publication_clearance",
+  "dataset": "public_optical_release_v1",
+  "directory": "public optical",
+  "source_manifest_sha256": "4233d7c993467e2640fbd971e6c23907d1b5c68696fb215275a0103483d48ef4",
+  "preview_manifest_sha256": "a27433c4c3e02533b7fcf0e6f3e4330148d657e963f672456796e399b4d0f231",
+  "transfer_manifest_sha256": "a27433c4c3e02533b7fcf0e6f3e4330148d657e963f672456796e399b4d0f231",
+  "payload_files": 173126,
+  "payload_bytes": 10400496335,
+  "training_hashes_added_from_actual_frozen_bytes": false,
+  "canonical_training_provenance": null,
+  "membership_changed": false,
+  "annotations_recomputed": false,
+  "summary_payload_verification_flag_is_historical": true
+}

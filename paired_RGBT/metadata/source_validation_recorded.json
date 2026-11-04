@@ -1,0 +1,14 @@
+{
+  "state": "complete",
+  "pairs": 35859,
+  "views": 71718,
+  "label_files": 35859,
+  "final_media_sha256_checks": 71718,
+  "label_sha256_checks": 35859,
+  "provenance_sha256_checks": 20621,
+  "exact_content_cross_split_overlap": 0,
+  "experiment_cross_split_overlap": 0,
+  "all9splitlists_match": true,
+  "frozen_source_membership_matches": true,
+  "manifest_sha256": "8f10fb98b629b6ce04be3945efaac55b288cba57500664591af2b56e20ae97a7"
+}

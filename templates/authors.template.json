@@ -1,0 +1,10 @@
+{
+  "status": "AUTHOR_INPUT_REQUIRED",
+  "authors": [],
+  "required_per_author": ["name", "affiliation", "contribution", "approval"],
+  "optional_if_known": ["orcid"],
+  "corresponding_author": null,
+  "funding": [],
+  "competing_interests": null,
+  "ethics_determination": null
+}

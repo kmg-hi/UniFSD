@@ -1,0 +1,107 @@
+{
+  "source_priority": [
+    "FASDD_CV",
+    "D-Fire",
+    "CQU",
+    "Roboflow_FireSmoke"
+  ],
+  "thresholds": {
+    "phash": 4,
+    "center_phash": 8,
+    "dhash": 10,
+    "ahash": 10,
+    "aspect_max": 0.25
+  },
+  "lsh": {
+    "band_bits": 16,
+    "band_step": 8,
+    "max_bucket_size": 4000,
+    "candidate_cap": 30000
+  },
+  "keep_policy": {
+    "internal_CQU": "highest_resolution",
+    "cross": "keep_existing_source_priority"
+  },
+  "input_counts": {
+    "FASDD_CV": 66480,
+    "D-Fire": 12446,
+    "CQU": 9842,
+    "Roboflow_FireSmoke": 7557
+  },
+  "cqu_new_internal_stage4": {
+    "before_images": 9842,
+    "duplicate_groups": 1409,
+    "removed_images": 3367,
+    "remaining_images": 6475,
+    "candidate_stats": {
+      "seen_pairs": 7195726,
+      "matched_pairs": 12309,
+      "buckets": 140380
+    },
+    "verification_stats": {
+      "seen_pairs": 3407046,
+      "matched_pairs": 0,
+      "buckets": 129161
+    },
+    "verification_groups": 0
+  },
+  "cross": {
+    "D-Fire": {
+      "pool_images": 66480,
+      "incoming_images": 12446,
+      "removed_images": 6158,
+      "remaining_incoming_images": 6288,
+      "seen_pairs": 13349760,
+      "buckets": 744693
+    },
+    "CQU": {
+      "pool_images": 72768,
+      "incoming_images": 6475,
+      "removed_images": 231,
+      "remaining_incoming_images": 6244,
+      "seen_pairs": 8499169,
+      "buckets": 778448
+    },
+    "Roboflow_FireSmoke": {
+      "pool_images": 79012,
+      "incoming_images": 7557,
+      "removed_images": 6,
+      "remaining_incoming_images": 7551,
+      "seen_pairs": 5866634,
+      "buckets": 810853
+    }
+  },
+  "retained_counts": {
+    "FASDD_CV": 66480,
+    "D-Fire": 6288,
+    "CQU": 6244,
+    "Roboflow_FireSmoke": 7551
+  },
+  "final_images": 86563,
+  "historical_internal_stages": {
+    "FASDD_CV": [
+      150,
+      20,
+      46,
+      28618
+    ],
+    "D-Fire": [
+      0,
+      0,
+      0,
+      9081
+    ],
+    "CQU_before_this_rebuild": [
+      1169,
+      0,
+      10,
+      0
+    ],
+    "Roboflow_FireSmoke": [
+      0,
+      0,
+      0,
+      886
+    ]
+  }
+}

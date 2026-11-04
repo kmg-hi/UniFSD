@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "public_optical_release_v1 CSV row (lexical string values)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id",
+    "split",
+    "image_path",
+    "label_path",
+    "source_dataset",
+    "source_record_id",
+    "width",
+    "height",
+    "file_size_bytes",
+    "image_sha256",
+    "classes",
+    "box_count",
+    "is_negative",
+    "split_group_id",
+    "dedup_stage",
+    "license_id",
+    "label_sha256"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "train",
+        "val",
+        "test"
+      ]
+    },
+    "image_path": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "label_path": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "source_dataset": {
+      "type": "string",
+      "enum": [
+        "FASDD_CV",
+        "D-Fire",
+        "CQU",
+        "Roboflow_FireSmoke"
+      ]
+    },
+    "source_record_id": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "width": {
+      "type": "string",
+      "pattern": "[1-9][0-9]*"
+    },
+    "height": {
+      "type": "string",
+      "pattern": "[1-9][0-9]*"
+    },
+    "file_size_bytes": {
+      "type": "string",
+      "pattern": "[1-9][0-9]*"
+    },
+    "image_sha256": {
+      "type": "string",
+      "pattern": "[0-9a-f]{64}"
+    },
+    "classes": {
+      "type": "string",
+      "enum": [
+        "",
+        "fire",
+        "smoke",
+        "fire,smoke"
+      ]
+    },
+    "box_count": {
+      "type": "string",
+      "pattern": "0|[1-9][0-9]*"
+    },
+    "is_negative": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "split_group_id": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "dedup_stage": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "license_id": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "label_sha256": {
+      "type": "string",
+      "pattern": "[0-9a-f]{64}"
+    }
+  }
+}

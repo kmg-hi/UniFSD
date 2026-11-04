@@ -1,0 +1,54 @@
+{
+  "total_pairs": 35859,
+  "total_views": 71718,
+  "seed": 20261025,
+  "ratio_target": [
+    0.8,
+    0.1,
+    0.1
+  ],
+  "split_unit": "domain + experiment",
+  "split_counts": {
+    "train": {
+      "pairs": 28811,
+      "real": 12190,
+      "fire_boxes": 36700,
+      "smoke_boxes": 25828,
+      "synthetic": 16621
+    },
+    "val": {
+      "pairs": 3524,
+      "real": 1524,
+      "fire_boxes": 6659,
+      "smoke_boxes": 4237,
+      "synthetic": 2000
+    },
+    "test": {
+      "pairs": 3524,
+      "real": 1524,
+      "fire_boxes": 6002,
+      "smoke_boxes": 2298,
+      "synthetic": 2000
+    }
+  },
+  "experiments": {
+    "train": 69,
+    "val": 9,
+    "test": 9
+  },
+  "leakage_groups": {
+    "train": 69,
+    "val": 9,
+    "test": 9
+  },
+  "excluded_reviewed_empty": 206,
+  "excluded_unreviewed": 173,
+  "exact_image_hash_cross_split_overlap": 0,
+  "experiment_cross_split_overlap": 0,
+  "scene_disjoint": false,
+  "old_real_splits_preserved": true,
+  "existing_real_border_overflow_boxes": 8905,
+  "synthetic_test_is_model_assisted_not_fully_independent_gt": true,
+  "thermal_warning": "Unity thermal is reference-plane registered; shared optic-coordinate targets, not independent raw-thermal GT",
+  "manifest_sha256": "8f10fb98b629b6ce04be3945efaac55b288cba57500664591af2b56e20ae97a7"
+}

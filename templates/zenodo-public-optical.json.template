@@ -1,0 +1,10 @@
+{
+  "title": "unified single-modal optical dataset",
+  "upload_type": "dataset",
+  "description": "INCOMPLETE TEMPLATE: 86563 retained RGB images from four sources. Component rights and actual payload require review before deposition.",
+  "creators": [],
+  "license": null,
+  "version": null,
+  "keywords": ["fire", "smoke", "object detection", "optical imagery", "secondary dataset"],
+  "related_identifiers": []
+}

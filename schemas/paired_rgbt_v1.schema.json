@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "paired_rgbt_v1 CSV row (lexical string values)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sample_id",
+    "split",
+    "domain",
+    "experiment",
+    "scene",
+    "split_group_id",
+    "optic_path",
+    "thermal_path",
+    "source_label_path",
+    "training_optic_label_path",
+    "training_thermal_label_path",
+    "optic_sha256",
+    "thermal_sha256",
+    "source_label_sha256",
+    "training_label_sha256",
+    "optic_width",
+    "optic_height",
+    "thermal_width",
+    "thermal_height",
+    "source_fire_boxes",
+    "source_smoke_boxes",
+    "source_label_basis",
+    "annotation_provenance"
+  ],
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "train",
+        "val",
+        "test"
+      ]
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "real",
+        "synthetic"
+      ]
+    },
+    "experiment": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "scene": {
+      "type": "string"
+    },
+    "split_group_id": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "optic_path": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "thermal_path": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "source_label_path": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "training_optic_label_path": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "training_thermal_label_path": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    },
+    "optic_sha256": {
+      "type": "string",
+      "pattern": "[0-9a-f]{64}"
+    },
+    "thermal_sha256": {
+      "type": "string",
+      "pattern": "[0-9a-f]{64}"
+    },
+    "source_label_sha256": {
+      "type": "string",
+      "pattern": "[0-9a-f]{64}"
+    },
+    "training_label_sha256": {
+      "type": "string",
+      "pattern": "(?:[0-9a-f]{64})?"
+    },
+    "optic_width": {
+      "type": "string",
+      "pattern": "[1-9][0-9]*"
+    },
+    "optic_height": {
+      "type": "string",
+      "pattern": "[1-9][0-9]*"
+    },
+    "thermal_width": {
+      "type": "string",
+      "pattern": "[1-9][0-9]*"
+    },
+    "thermal_height": {
+      "type": "string",
+      "pattern": "[1-9][0-9]*"
+    },
+    "source_fire_boxes": {
+      "type": "string",
+      "pattern": "0|[1-9][0-9]*"
+    },
+    "source_smoke_boxes": {
+      "type": "string",
+      "pattern": "0|[1-9][0-9]*"
+    },
+    "source_label_basis": {
+      "type": "string"
+    },
+    "annotation_provenance": {
+      "type": "string",
+      "pattern": "[^\\r\\n]+"
+    }
+  }
+}

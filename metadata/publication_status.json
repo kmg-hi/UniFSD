@@ -1,0 +1,19 @@
+{
+  "publication_ready": false,
+  "stage": "authorised_private_upload_in_progress_not_public_release",
+  "reviewed_at": null,
+  "reviewed_by": null,
+  "blockers": [
+    {"id": "source_rights", "resolved": false, "evidence": null, "action": "Verify component-level redistribution rights; retain original terms and attribution."},
+    {"id": "real_capture_ethics_privacy", "resolved": false, "evidence": null, "action": "Institutional ethics/consent assessment and actual image privacy/security review."},
+    {"id": "unity_asset_rights", "resolved": false, "evidence": null, "action": "Audit rendered-output and asset/source redistribution rights separately."},
+    {"id": "canonical_payload", "resolved": false, "evidence": null, "action": "Stage actual frozen images, source labels and derived training labels; verify bytes and counts."},
+    {"id": "derived_label_provenance", "resolved": false, "evidence": null, "action": "Export existing canonical derived labels and hashes without regenerating frozen GT."},
+    {"id": "annotation_quality", "resolved": false, "evidence": null, "action": "Document annotation protocol, model versions, review coverage and uncertainty."},
+    {"id": "acquisition_metadata", "resolved": false, "evidence": null, "action": "Confirm sensor/acquisition/scene/Unity versions and calibration details."},
+    {"id": "portable_processing_code", "resolved": false, "evidence": null, "action": "Port original processing pipeline, audit code licences, pin and test environments."},
+    {"id": "authors_and_licenses", "resolved": false, "evidence": null, "action": "Obtain author approval and choose separate data/code licences without overriding third-party rights."},
+    {"id": "repository_and_identifiers", "resolved": false, "evidence": null, "action": "Create approved repositories, reserve identifiers and verify reviewer access."},
+    {"id": "manuscript_and_deposit_alignment", "resolved": false, "evidence": null, "action": "Cross-check article statements, data citations and final versioned deposit contents."}
+  ]
+}

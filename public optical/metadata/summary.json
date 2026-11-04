@@ -1,0 +1,21 @@
+{
+  "samples": 86563,
+  "split_counts": {
+    "train": 68475,
+    "val": 8714,
+    "test": 9374
+  },
+  "groups": 5845,
+  "group_cross_split_overlap": 0,
+  "recorded_image_hash_cross_split_overlap": 0,
+  "payload_files_verified_now": false,
+  "source_counts": {
+    "FASDD_CV": 66480,
+    "D-Fire": 6288,
+    "CQU": 6244,
+    "Roboflow_FireSmoke": 7551
+  },
+  "boxes_from_manifest": 112279,
+  "negative_images": 41364,
+  "dfire_publicdataset_name_matches": 719
+}

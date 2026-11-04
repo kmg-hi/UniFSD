@@ -1,0 +1,28 @@
+{
+  "status": "AUTHOR_VERIFICATION_REQUIRED",
+  "real": {
+    "experiment_count": 66,
+    "capture_dates": null,
+    "site_description_approved_for_release": null,
+    "optical_camera_make_model": null,
+    "thermal_camera_make_model": null,
+    "sensor_bit_depth_and_temperature_units": null,
+    "frame_sampling_and_synchronisation": null,
+    "calibration_and_processing_protocol": null,
+    "capture_permissions_and_ethics_determination": null
+  },
+  "synthetic": {
+    "experiment_count": 21,
+    "engine": "Unity",
+    "engine_version": null,
+    "project_version": null,
+    "optic_render_size_pixels": [1280, 720],
+    "raw_thermal_render_size_pixels": [640, 480],
+    "registered_thermal_size_pixels": [1280, 720],
+    "reference_depth_meters": 5.317814839,
+    "thermal_physics_shader_and_colour_mapping": null,
+    "scene_parameter_sampling_and_seeds": null,
+    "asset_rights_inventory": null,
+    "annotation_model_and_review_protocol": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "samples": 35859,
+  "split_counts": {
+    "train": 28811,
+    "test": 3524,
+    "val": 3524
+  },
+  "groups": 87,
+  "group_cross_split_overlap": 0,
+  "recorded_image_hash_cross_split_overlap": 0,
+  "payload_files_verified_now": false,
+  "domain_counts": {
+    "real": 15238,
+    "synthetic": 20621
+  },
+  "source_box_counts_by_split_domain": {
+    "train/real": {
+      "fire": 11931,
+      "smoke": 3035
+    },
+    "test/real": {
+      "fire": 2264,
+      "smoke": 0
+    },
+    "val/real": {
+      "fire": 1290,
+      "smoke": 863
+    },
+    "train/synthetic": {
+      "fire": 24769,
+      "smoke": 22793
+    },
+    "val/synthetic": {
+      "fire": 5369,
+      "smoke": 3374
+    },
+    "test/synthetic": {
+      "fire": 3738,
+      "smoke": 2298
+    }
+  },
+  "source_box_counts": {
+    "fire": 49361,
+    "smoke": 32363
+  }
+}

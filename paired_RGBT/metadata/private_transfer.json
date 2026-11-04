@@ -1,0 +1,24 @@
+{
+  "purpose": "authorised_private_transfer_not_publication_clearance",
+  "dataset": "paired_rgbt_v1",
+  "directory": "paired_RGBT",
+  "source_manifest_sha256": "8f10fb98b629b6ce04be3945efaac55b288cba57500664591af2b56e20ae97a7",
+  "preview_manifest_sha256": "9278ab38de8fd7180c0d7883c31f593c0a3b2856a0ce59cf9622b730a9e2d722",
+  "transfer_manifest_sha256": "ae81e7bf0bc06deb6b07cb9e5fccf0076bb22dca7dad1e93dc9babe4f8f0f98a",
+  "payload_files": 179295,
+  "payload_bytes": 23955151228,
+  "training_hashes_added_from_actual_frozen_bytes": true,
+  "canonical_training_provenance": {
+    "artifact_sha256": "3183f09b06050e1eac9ec6abfa8676ff808d071fd66408a60e80775db81b7e14",
+    "source_manifest_sha256": "8f10fb98b629b6ce04be3945efaac55b288cba57500664591af2b56e20ae97a7",
+    "pairs": 35859,
+    "label_files": 71718,
+    "method": "Copy existing UTF-8 label bytes from the frozen adapter artifact; verify every original label_sha256",
+    "relabelled": false,
+    "boxes_recomputed": false,
+    "splits_changed": false
+  },
+  "membership_changed": false,
+  "annotations_recomputed": false,
+  "summary_payload_verification_flag_is_historical": true
+}
