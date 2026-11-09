@@ -62,11 +62,11 @@ def upload(executable, dataset, output, allow_partial=False):
     text = (f"# Private transfer: {catalog['directory']}\n\n"
             "Unpublished preparation draft in a PRIVATE repository; not a public dataset release.\n\n"
             f"The complete transfer requires {planned_parts} independently readable ZIP parts. Download all numbered parts, "
-            f"verify `{prefix}-SHA256SUMS.txt`, and extract every part into the same parent directory.\n"
+            f"verify the sizes and SHA-256 values in `{prefix}-archives.json`, and extract every part into the same parent directory.\n"
             f"The result has the root folder `{catalog['directory']}/`. Do not concatenate the ZIP parts.\n\n"
             "PAYLOAD_FILES.csv inside the dataset root lists the retained payload members and SHA-256 values. "
             "Each uploaded part has passed source and archived-member hash checks. "
-            "The transfer remains incomplete until all numbered parts, the archive catalog and checksum file are attached.\n\n"
+            "The transfer remains incomplete until all numbered parts, the archive catalog and download instructions are attached.\n\n"
             "Source annotations and canonical training annotations are distinct. Frozen IDs and train/val/test membership are preserved.\n"
             "Historical metadata preview status is separate from the new private-transfer verification record.\n\n"
             "Source/component redistribution rights, privacy/ethics, final licences, author approvals and DOI deposition remain pending. "
@@ -101,7 +101,7 @@ def upload(executable, dataset, output, allow_partial=False):
 
     expected = list(catalog["parts"])
     if final:
-        for path in (catalog_path, output / (prefix + "-SHA256SUMS.txt"), notes):
+        for path in (catalog_path, notes):
             expected.append({"name": path.name, "bytes": path.stat().st_size, "sha256": sha256(path)})
     completed = []
     for item in expected:
@@ -122,10 +122,10 @@ def upload(executable, dataset, output, allow_partial=False):
         completed.append({**item, "asset_id": existing[0]["id"], "remote_digest": existing[0]["digest"]})
         write_json(output / (prefix + "-upload-progress.json"), {
             "repo": REPO, "tag": tag, "release_id": release["id"], "release_url": release["html_url"],
-            "draft": True, "completed_assets": completed, "planned_assets": planned_parts + 3,
+            "draft": True, "completed_assets": completed, "planned_assets": planned_parts + 2,
             "complete": final and len(completed) == len(expected)})
         print(json.dumps({"stage": "remote_digest_verified", "asset": item["name"],
-                          "completed": len(completed), "total": planned_parts + 3}), flush=True)
+                          "completed": len(completed), "total": planned_parts + 2}), flush=True)
     return {"dataset": dataset, "release_url": release["html_url"], "assets": len(completed),
             "draft": True, "private": True, "complete": final}
 

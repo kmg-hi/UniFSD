@@ -46,7 +46,7 @@ def validate_metadata(base, plan):
     output = {}
     for dataset in DATASETS:
         target = deposit_root(base, dataset, plan)
-        verify_checksums(target)
+        verify_checksums(target, required=False)
         manifest = target / "metadata/manifest.csv"
         actual = summarise_manifest(manifest, dataset)
         check_expected(actual, plan["datasets"][dataset])

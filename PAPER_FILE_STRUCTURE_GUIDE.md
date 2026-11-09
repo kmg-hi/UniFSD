@@ -172,15 +172,15 @@ scientific_data_publication/
 
 ## 6. 데이터 기탁 준비 폴더
 
-현재 두 폴더에는 **manifest·분할 목록·설명·메타데이터 체크섬**이 생성돼 있습니다.
-아래 `[미기탁]`은 공개 영구 저장소 기탁이 완료되지 않았다는 뜻입니다.
-2026-11-04 저자 승인에 따른 별도 비공개 ZIP 전송은 완료했으며,
-해당 원본 이미지·원본/학습용 라벨은 파일별·압축 복원·전송 해시를 구분해 검증합니다.
+아래 구조는 2026-11-09 수정 ZIP을 모두 풀었을 때의 배포 구성입니다.
+manifest·분할 목록·설명은 Git에도 있고, 실제 이미지·라벨은 비공개 ZIP에 있습니다.
+별도 체크섬 목록과 정합 설정 JSON은 이 구성에서 제외합니다.
+공개 영구 저장소 기탁과 권한 검토는 별도 미완료 사항입니다.
 
 ### 6.1 unified single-modal optical dataset
 
 ```text
-data_deposit/public optical/
+public optical/
 |-- README.md
 |-- metadata/
 |   |-- manifest.csv
@@ -194,10 +194,9 @@ data_deposit/public optical/
 |   |-- summary.json
 |   `-- build_provenance.json
 |-- splits/{train,val,test}.txt
-|-- SHA256SUMS_METADATA.txt
-|-- images/{train,val,test}/...              [미기탁]
-|-- labels/{train,val,test}/...              [미기탁]
-`-- annotations/instances_{split}.json       [미기탁, 기존 COCO 산출물 검증 후 포함]
+|-- images/{train,val,test}/...
+|-- labels/{train,val,test}/...
+`-- PAYLOAD_FILES.csv
 ```
 
 `rights_review_queue.csv`는 현재 식별된 D-Fire 719개 검토 목록입니다.
@@ -206,24 +205,23 @@ data_deposit/public optical/
 ### 6.2 multi-modal optical–thermal paired dataset
 
 ```text
-data_deposit/paired_RGBT/
+paired_RGBT/
 |-- README.md
 |-- metadata/
 |   |-- manifest.csv
 |   |-- classes.json
-|   |-- registration.public.json
 |   |-- source_summary.json
 |   |-- source_validation_recorded.json
 |   |-- source_rights_review.csv
 |   |-- summary.json
 |   `-- build_provenance.json
 |-- splits/{train,val,test}.txt
-|-- SHA256SUMS_METADATA.txt
-|-- dataset/{real,synthetic}/{experiment}/   [미기탁]
+|-- dataset/{real,synthetic}/{experiment}/
 |   |-- pair_optic/...
 |   |-- pair_thermal/...
 |   `-- pair_label/...
-`-- labels/{optic,thermal}/{domain}/{experiment}/... [미기탁]
+|-- labels/{optic,thermal}/{domain}/{experiment}/...
+`-- PAYLOAD_FILES.csv
 ```
 
 | 경로·필드 | 의미 |
@@ -238,8 +236,10 @@ data_deposit/paired_RGBT/
 실제 동결 학습 라벨에서 확보해야 하며,
 원본 주석 해시를 복사해 채우거나 라벨을 새로 생성·보정해서 대신하지 않습니다.
 
-`SHA256SUMS_METADATA.txt`는 현재 **메타데이터만** 검증합니다. 전체 데이터 기탁 시에는
-실제 이미지·라벨·압축 파일의 해시와 멤버 목록도 검증·제공해야 합니다.
+2026-11-09 배포 구성에서는 별도 체크섬 목록과 정합 설정 JSON을 제외합니다.
+manifest와 PAYLOAD_FILES.csv의 파일 해시, ZIP 목록 JSON의 압축 파일 해시는 유지합니다.
+이전 검증 기록과 원본 보정 정보는 내부에 보존하며 데이터와 주석은 변경하지 않습니다.
+최신 Figure 6과 논문용 문안은 [구조·metadata 설명](docs/DATASET_STRUCTURE_AND_METADATA.md)을 따릅니다.
 
 ## 7. 논문 섹션과 파일의 연결
 

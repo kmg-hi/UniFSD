@@ -29,7 +29,9 @@ entire path when passing a path containing `public optical` to a command.
 
 Metadata checks verify full row membership, categories, counts, group and exact
 recorded-content-hash split separation, relative paths, split-list order, and
-metadata checksums. Metadata SHA values do not verify the actual media payload.
+manifest provenance hashes. An optional internal metadata checksum list is also
+verified when present, but is not part of the distributed layout. Metadata SHA
+values do not verify the actual media payload.
 
 ## Payload and publication checks
 

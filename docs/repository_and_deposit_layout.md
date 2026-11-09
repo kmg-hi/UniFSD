@@ -32,9 +32,8 @@ public optical/
     summary.json
     build_provenance.json
   splits/train.txt, val.txt, test.txt
-  images/{train,val,test}/...          [NOT STAGED]
-  labels/{train,val,test}/...          [NOT STAGED]
-  SHA256SUMS_METADATA.txt
+  images/{train,val,test}/...          [present after ZIP extraction]
+  labels/{train,val,test}/...          [present after ZIP extraction]
 ```
 
 Keep original licence/attribution evidence beside the final deposit. The current
@@ -48,19 +47,17 @@ paired_RGBT/
   README.md
   metadata/
     manifest.csv
-    registration.public.json
     source_summary.json
     source_validation_recorded.json
     summary.json
     build_provenance.json
   splits/train.txt, val.txt, test.txt
   dataset/{real,synthetic}/{experiment}/
-    pair_optic/...                    [NOT STAGED]
-    pair_thermal/...                  [NOT STAGED: registered thermal]
-    pair_label/...                    [NOT STAGED: source GT]
+    pair_optic/...                    [retained optical views]
+    pair_thermal/...                  [processed/registered thermal views]
+    pair_label/...                    [source GT]
   labels/{optic,thermal}/{domain}/{experiment}/...
-                                     [NOT STAGED: canonical derived GT]
-  SHA256SUMS_METADATA.txt
+                                     [frozen canonical derived GT]
 ```
 
 These root directory names are exact, including the space in `public optical` and
@@ -70,8 +67,8 @@ are unchanged. Manifest file paths are relative to the corresponding root.
 The `directory` fields in `metadata/release_plan.json` configure the preparation tools.
 
 `pair_label` source labels and `labels/...` training labels have different roles.
-Do not regenerate the latter as part of packaging. Populate their presently blank
-hashes only from the actual frozen training artefacts. If raw thermal or original
+Do not regenerate the latter as part of packaging. The private-transfer manifest
+contains hashes checked against the actual frozen training artefact. If raw thermal or original
 sensor exports are shared, use separate documented paths, dimensions, bit depths,
 rights and checksums. Do not call registered RGB thermal views raw radiometry.
 

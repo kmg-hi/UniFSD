@@ -77,8 +77,8 @@ independently readable ZIP parts attached to unpublished drafts in this same
 private repository, not as ordinary Git blobs or metered Git LFS objects.
 Download all numbered parts for a dataset, verify their archive checksums, and
 extract every part into the same parent directory. Do not concatenate the ZIPs.
-Both private transfers are complete: all 25 ZIP parts and six archive-catalog,
-checksum and download-note assets were uploaded and their server SHA-256 values
+Both private transfers are complete: all 25 ZIP parts and four archive-catalog
+and download-note assets were uploaded and their server SHA-256 values
 verified. They cover 352,421 frozen image/annotation files, plus metadata. No paid
 capacity is enabled. Verification is recorded in `metadata/private_transfer_status.json`.
 Private draft locations:
@@ -103,7 +103,7 @@ tests/                            Tests for the preparation utilities
 templates/                        Unfinished citation and deposit metadata templates
 LICENSES/                         Licensing guidance; final terms still pending
 public optical/                   Single-modal metadata, splits, and payload inventory
-paired_RGBT/                      Paired metadata, splits, registration, and payload inventory
+paired_RGBT/                      Paired metadata, splits, and payload inventory
 ```
 
 This README remains a preparation draft, not a dataset release announcement.
@@ -127,7 +127,6 @@ public optical/
     summary.json
     ...
   splits/{train,val,test}.txt
-  SHA256SUMS_METADATA.txt
 
 paired_RGBT/
   README.md
@@ -139,11 +138,9 @@ paired_RGBT/
   metadata/
     manifest.csv
     classes.json
-    registration.public.json
     summary.json
     ...
   splits/{train,val,test}.txt
-  SHA256SUMS_METADATA.txt
 ```
 
 Image and annotation directories appear after all private ZIP parts are extracted;
@@ -151,10 +148,11 @@ they are not included as ordinary Git files in the repository tree.
 Paths inside each manifest are relative to its dataset root. Quote paths containing
 the space in `public optical` when using command-line tools. Preparation scripts
 still accept stable record identifiers and resolve folder names from `metadata/release_plan.json`.
-`SHA256SUMS_METADATA.txt` covers metadata only. `PAYLOAD_FILES.csv` records the
-payload paths, sizes, and expected hashes; the separate archive catalogs and
-`*-SHA256SUMS.txt` files record verified ZIP parts. Metadata alone does not prove
-that the entire transfer has completed.
+`PAYLOAD_FILES.csv` records payload paths, sizes and expected hashes. The archive
+catalogs record verified ZIP sizes and SHA-256 values. The 2026-11-09 revision
+omits standalone checksum lists and the camera-registration JSON from both Git
+and the ZIP parts. Manifest hash fields, all payload bytes and internal validation
+records remain unchanged. Extract revised archives into an empty folder.
 
 ## Sample identifiers and correspondence
 
@@ -267,6 +265,7 @@ verified hashes. See also:
 - [unified single-modal optical dataset card](dataset_cards/public_optical.md)
 - [multi-modal optical–thermal paired dataset card](dataset_cards/paired_rgbt.md)
 - [Dataset and deposit layout](docs/repository_and_deposit_layout.md)
+- [Dataset structure, metadata and revised Figure 6](docs/DATASET_STRUCTURE_AND_METADATA.md)
 - [Methods and validation notes](docs/methods_and_validation.md)
 - [Source and rights review](docs/rights_ethics_and_assets.md)
 

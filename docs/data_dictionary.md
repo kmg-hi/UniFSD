@@ -64,19 +64,21 @@ assisted; do not describe all labels as independently human-drawn ground truth.
 - `private_transfer.json`: private-transfer scope, original/transfer manifest hashes and canonical-label provenance; not public-release clearance.
 - `splits/*.txt`: one frozen sample ID per line; not paths or newly sampled splits.
 - `source_rights_review.csv`: `PENDING` is unresolved; recorded licence != clearance.
-- `SHA256SUMS_METADATA.txt`: checksums of metadata only, not the full image/annotation payload.
 - `PAYLOAD_FILES.csv`: relative path, size, SHA-256 and role of every frozen payload file in the ZIP parts.
 
-`registration.public.json` currently describes the Unity camera calibration and
-thermal-to-optical reference-plane transform, not calibration for every real
-capture. It includes native optic/thermal sizes, intrinsics, the inter-camera
-rigid transform, forward/inverse homographies and an explicit reference-depth
-validity/parallax warning. The legacy canvas-fit section is diagnostic and is
-explicitly marked invalid as calibration. Native thermal dimensions in this
-record are not the dimensions of the processed registered thermal files; use
-the manifest's per-view dimensions for the retained images.
-The transforms document the existing processing, not an instruction to apply
-registration again to already registered images or to all real-capture pairs.
+The 2026-11-09 distribution revision omits standalone checksum-list files and
+the camera-registration JSON from both the Git tree and downloadable ZIP parts.
+File hashes remain in the unchanged manifests and payload inventories. Archive
+catalogs retain ZIP sizes and SHA-256 values. Internal calibration and earlier
+verification records are preserved separately and are not uploaded again.
+
+Retained thermal files remain processed/registered views. Removing a distributed
+calibration file does not undo that processing or establish calibration for every
+real capture. Reference-plane registration has residual parallax at other depths.
+Use the manifest's per-view dimensions and do not register retained images again.
+
+See [Dataset structure and metadata](DATASET_STRUCTURE_AND_METADATA.md) for the
+revised Figure 6 layout, file roles and manuscript-ready Data Records wording.
 
 `classes.json` gives the shared ID mapping. Machine-readable field allowlists are
 in `schemas/`; the validator implements these fields and additional invariants

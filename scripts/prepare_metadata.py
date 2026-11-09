@@ -4,8 +4,8 @@ import argparse
 import csv
 from pathlib import Path
 
-from publication import (ROOT, DATASETS, SPLITS, check_expected, csv_rows, deposit_root, make_checksums,
-                         read_json, read_schema, safe_relative, sanitize_registration,
+from publication import (ROOT, DATASETS, SPLITS, check_expected, csv_rows, deposit_root,
+                         read_json, read_schema, safe_relative,
                          selected_json, sha256, summarise_manifest, write_csv, write_json,
                          write_rights_review_queue)
 
@@ -74,7 +74,6 @@ def export_paired(source, target, expected_sha):
                        "annotation_provenance": "existing_real_labels_protocol_pending" if domain == "real" else "model_assisted_review_protocol_pending"}
 
     write_csv(target / "metadata/manifest.csv", list(schema["properties"]), converted())
-    write_json(target / "metadata/registration.public.json", sanitize_registration(read_json(source / "registration_config.json")))
     selected_json(source / "split_summary.json", target / "metadata/source_summary.json", [
         "total_pairs", "total_views", "seed", "ratio_target", "split_unit", "split_counts", "experiments", "leakage_groups",
         "excluded_reviewed_empty", "excluded_unreviewed", "exact_image_hash_cross_split_overlap", "experiment_cross_split_overlap",
@@ -98,7 +97,7 @@ def finish(target, dataset, inputs, expected):
         "source_payload_rehashed_now": False, "splits_regenerated": False,
         "derived_training_labels_staged": False,
         "redactions": ["Private local/remote operational path fields are excluded by allowlist."] +
-                      (["calibration_source.path removed from registration configuration."] if dataset == DATASETS[1] else []),
+                      (["Camera registration configuration is retained internally, not exported."] if dataset == DATASETS[1] else []),
         "rights_status": "Recorded source terms are not current component-level clearance."})
     handles = {}
     try:
@@ -119,10 +118,9 @@ def finish(target, dataset, inputs, expected):
         "No images or label payloads have been copied. Not an upload-ready dataset.\n"
         "Manifest hashes are expected source values, not fresh full-image checks.\n"
         "Source GT and canonical derived training GT are distinct; derived hashes remain pending.\n"
-        "SHA256SUMS_METADATA.txt covers only this metadata preview.\n"
+        "File hashes remain in manifests; standalone checksum lists are not distributed.\n"
         "Rights, privacy, authors, licence and identifiers require review.\n"
         "See the companion repository data dictionary and dataset card before reuse.\n", encoding="utf-8")
-    make_checksums(target)
     return summary
 
 

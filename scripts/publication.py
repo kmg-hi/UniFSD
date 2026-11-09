@@ -233,9 +233,17 @@ def make_checksums(base):
     (base / "SHA256SUMS_METADATA.txt").write_text("".join(lines), encoding="utf-8")
 
 
-def verify_checksums(base):
+def distribution_metadata_files(base):
+    for path in metadata_files(base):
+        if "SHA256SUMS" not in path.name and path.name != "registration.public.json":
+            yield path
+
+
+def verify_checksums(base, required=True):
     base = Path(base)
     inventory = base / "SHA256SUMS_METADATA.txt"
+    if not inventory.exists() and not required:
+        return
     listed = set()
     for line in inventory.read_text(encoding="utf-8").splitlines():
         digest, relative = line.split("  ", 1)

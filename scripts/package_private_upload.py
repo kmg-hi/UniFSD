@@ -10,7 +10,7 @@ import zipfile
 from pathlib import Path
 
 from publication import (ROOT, DATASETS, check_expected, contained_file, csv_rows,
-                         deposit_root, make_checksums, metadata_files, read_json,
+                         deposit_root, distribution_metadata_files, read_json,
                          safe_relative, sha256, summarise_manifest, write_json)
 
 PART_LIMIT = 1500 * 1024 * 1024
@@ -47,7 +47,7 @@ def transfer_members(inventory, dataset, output):
     for entry in entries:
         if entry["role"] == "training_optic_label":
             hashes[entry["sample_id"]] = entry["expected_sha256"]
-    for source in metadata_files(preview):
+    for source in distribution_metadata_files(preview):
         relative = source.relative_to(preview).as_posix()
         if relative == "README.md":
             continue
@@ -107,8 +107,7 @@ def transfer_members(inventory, dataset, output):
     for entry in entries:
         writer.writerow((entry["relative_path"], entry["bytes"], entry["expected_sha256"], entry["role"]))
     write_once(target / "PAYLOAD_FILES.csv", buffer.getvalue().encode("utf-8"))
-    make_checksums(target)
-    extra = list(metadata_files(target)) + [target / "SHA256SUMS_METADATA.txt", target / "PAYLOAD_FILES.csv"]
+    extra = list(distribution_metadata_files(target)) + [target / "PAYLOAD_FILES.csv"]
     metadata = [{"relative_path": p.relative_to(target).as_posix(), "source_path": str(p),
                  "bytes": p.stat().st_size, "expected_sha256": sha256(p), "role": "metadata"} for p in extra]
     result = metadata + entries
@@ -208,8 +207,6 @@ def package(inventory, dataset, output):
               "parts": completed, "files": len(entries), "payload_hashes_verified_now": True,
               "all_archive_members_extraction_verified": True, "public_release": False}
     write_json(output / f"{PREFIXES[dataset]}-archives.json", result)
-    sums = "".join(f"{item['sha256']}  {item['name']}\n" for item in completed)
-    write_once(output / f"{PREFIXES[dataset]}-SHA256SUMS.txt", sums.encode())
     return result
 
 

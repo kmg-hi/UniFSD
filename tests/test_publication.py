@@ -12,7 +12,7 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from publication import (ROOT, DATASETS, REQUIRED_BLOCKERS, check_expected,
-                         contained_file, deposit_root, make_checksums, publication_blockers,
+                         contained_file, deposit_root, distribution_metadata_files, make_checksums, publication_blockers,
                          read_json, read_schema, safe_relative, sanitize_registration,
                          sha256, summarise_manifest, validate_row, verify_checksums,
                          verify_payload, write_csv, write_json, write_rights_review_queue)
@@ -98,7 +98,26 @@ class PublicationTests(unittest.TestCase):
             with zipfile.ZipFile(output) as archive:
                 self.assertEqual(set(archive.namelist()), {
                     "INCOMPLETE_NOT_FOR_DATA_PUBLICATION.txt", base.name + "/README.md",
-                    base.name + "/metadata/classes.json", base.name + "/SHA256SUMS_METADATA.txt"})
+                    base.name + "/metadata/classes.json"})
+
+    def test_distribution_omits_auxiliary_files_without_touching_internal_copies(self):
+        write_json(self.root / "metadata/classes.json", {"0": "fire", "1": "smoke"})
+        write_json(self.root / "metadata/registration.public.json", {"internal": True})
+        make_checksums(self.root)
+        retained = {path.relative_to(self.root).as_posix() for path in distribution_metadata_files(self.root)}
+        self.assertEqual(retained, {"metadata/classes.json"})
+        self.assertTrue((self.root / "metadata/registration.public.json").is_file())
+        self.assertTrue((self.root / "SHA256SUMS_METADATA.txt").is_file())
+
+    def test_optional_checksum_list_is_not_required_but_existing_tampering_fails(self):
+        verify_checksums(self.root, required=False)
+        with self.assertRaises(FileNotFoundError):
+            verify_checksums(self.root)
+        write_json(self.root / "metadata/classes.json", {"0": "fire", "1": "smoke"})
+        make_checksums(self.root)
+        write_json(self.root / "metadata/classes.json", {"0": "changed"})
+        with self.assertRaises(ValueError):
+            verify_checksums(self.root, required=False)
 
     def test_reject_unsafe_paths(self):
         for value in ("../secret", "/absolute", "//server/file", "C:/secret", "a\\b", "a/../b", "./a", "a//b", "a\nb", "a:b", ""):

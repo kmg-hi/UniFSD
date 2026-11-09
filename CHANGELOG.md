@@ -27,3 +27,12 @@
 - Retained frozen membership; distinguished source labels from derived training labels.
 - Added policy links, rights/ethics blockers, manuscript and repository metadata templates.
 - No public release, DOI assignment, licence grant, data modification, or model evaluation.
+## 2026-11-09 Distribution Metadata Revision
+
+- Omit standalone checksum-list files and camera-registration JSON from the
+  active Git tree, downloadable ZIP parts and revised Figure 6.
+- Preserve manifest hashes, payload inventories, every image/label byte and
+  frozen splits. Keep historical archives and validation records internally.
+- Replace only each dataset's first ZIP part and retain repository privacy and
+  unpublished draft status.
+- Add the dataset structure and metadata guide with manuscript-ready wording.
