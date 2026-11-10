@@ -1,5 +1,14 @@
 # Changelog
 
+## Repository Name - 2026-11-11
+
+- Rename the existing repository to kmg-hi/UniFSD without transferring ownership
+  or changing its private visibility.
+- Use "UniFSD: Unified fire and smoke dataset" as the README display title and
+  update the dataset download links to the new repository URL.
+- Preserve dataset roots, record identifiers, every metadata/hash field, all
+  existing image/label archives and the descriptive figures unchanged.
+
 ## Distribution Repository Cleanup and Overview Figures - 2026-11-11
 
 - Preserve an internal byte-verified snapshot before removing duplicate README

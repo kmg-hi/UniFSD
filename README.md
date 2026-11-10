@@ -1,4 +1,8 @@
-# Unified Fire and Smoke Datasets
+# UniFSD: Unified fire and smoke dataset
+
+**UniFSD** stands for **Unified Fire and Smoke Dataset**. It is the umbrella
+name for the two separate records below; the name does not merge their sample
+membership, change the frozen splits or rename their manifest identifiers.
 
 Two curated records for optical and optical-thermal fire/smoke detection.
 The repository contains documentation, metadata, frozen split assignments and
@@ -35,8 +39,8 @@ They are **not** the separate 86,563-image optical record.
 
 | Data | Private download | ZIP parts |
 |---|---|---:|
-| Optical | [Dataset attachments](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b) | 8 |
-| Optical-thermal | [Dataset attachments](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6) | 17 |
+| Optical | [Dataset attachments](https://github.com/kmg-hi/UniFSD/releases/tag/untagged-83bf651c3c7c7f34d35b) | 8 |
+| Optical-thermal | [Dataset attachments](https://github.com/kmg-hi/UniFSD/releases/tag/untagged-d38a0decc3241fd55fa6) | 17 |
 
 1. Download every ZIP named in the dataset's `*-archives.json` catalog.
 2. Use the revised first part containing `metadata20261109`; do not mix it with
