@@ -1,0 +1,122 @@
+{
+  "paired_rgbt__optic": {
+    "images": 35859,
+    "distinct_sizes": 42,
+    "width_min": 327,
+    "width_max": 1280,
+    "height_min": 242,
+    "height_max": 720,
+    "top_sizes": [
+      {
+        "width": 1280,
+        "height": 720,
+        "images": 20621,
+        "percent": 57.5057865528877
+      },
+      {
+        "width": 447,
+        "height": 251,
+        "images": 3466,
+        "percent": 9.665634847597534
+      },
+      {
+        "width": 602,
+        "height": 395,
+        "images": 2590,
+        "percent": 7.222733483923143
+      },
+      {
+        "width": 630,
+        "height": 468,
+        "images": 1939,
+        "percent": 5.407289662288408
+      },
+      {
+        "width": 610,
+        "height": 368,
+        "images": 978,
+        "percent": 2.7273487827323684
+      }
+    ]
+  },
+  "paired_rgbt__thermal": {
+    "images": 35859,
+    "distinct_sizes": 42,
+    "width_min": 327,
+    "width_max": 1280,
+    "height_min": 242,
+    "height_max": 720,
+    "top_sizes": [
+      {
+        "width": 1280,
+        "height": 720,
+        "images": 20621,
+        "percent": 57.5057865528877
+      },
+      {
+        "width": 447,
+        "height": 251,
+        "images": 3466,
+        "percent": 9.665634847597534
+      },
+      {
+        "width": 602,
+        "height": 395,
+        "images": 2590,
+        "percent": 7.222733483923143
+      },
+      {
+        "width": 630,
+        "height": 468,
+        "images": 1939,
+        "percent": 5.407289662288408
+      },
+      {
+        "width": 610,
+        "height": 368,
+        "images": 978,
+        "percent": 2.7273487827323684
+      }
+    ]
+  },
+  "public_optical__optic": {
+    "images": 86563,
+    "distinct_sizes": 18354,
+    "width_min": 78,
+    "width_max": 10600,
+    "height_min": 68,
+    "height_max": 8858,
+    "top_sizes": [
+      {
+        "width": 640,
+        "height": 640,
+        "images": 13926,
+        "percent": 16.087704908563705
+      },
+      {
+        "width": 640,
+        "height": 360,
+        "images": 3656,
+        "percent": 4.2235135103912755
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "images": 3590,
+        "percent": 4.147268463431258
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "images": 2820,
+        "percent": 3.2577429155643864
+      },
+      {
+        "width": 224,
+        "height": 224,
+        "images": 2213,
+        "percent": 2.5565195291290737
+      }
+    ]
+  }
+}

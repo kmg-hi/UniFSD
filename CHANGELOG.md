@@ -1,5 +1,18 @@
 # Changelog
 
+## Distribution Repository Cleanup and Overview Figures - 2026-11-11
+
+- Preserve an internal byte-verified snapshot before removing duplicate README
+  drafts, manuscript-authoring templates and internal transfer tools from Git.
+- Consolidate user documentation and move the completed directory diagram to
+  figures/directory_structure without changing its bytes.
+- Keep manifest schemas and read-only validation tests; remove dependencies on
+  internal manuscript drafts and authoring templates.
+- Add reproducible dataset-scale, retained-resolution and Fire/Smoke source-box
+  figures, plus an explicit source-versus-canonical box-area supplement.
+- Preserve every existing dataset/metadata file and hash, all frozen splits and
+  all 29 ZIP/catalog/download attachments. No training or evaluation was rerun.
+
 ## Authorised private payload transfer - 2026-11-04
 
 - Added manifest-only source inventories, original canonical-label byte restoration, bounded ZIP packaging and unpublished private-draft upload utilities.

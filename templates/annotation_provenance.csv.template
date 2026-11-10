@@ -1,1 +1,0 @@
-sample_id,annotation_origin,tool,tool_version,model_version_or_checkpoint_sha256,automatic_acceptance_rule,human_review_scope,review_protocol_version,source_annotation_sha256,derived_annotation_sha256,uncertainty_note

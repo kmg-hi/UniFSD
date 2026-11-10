@@ -34,20 +34,29 @@ Original GT is preserved. The learned benchmark uses common visible-intersection
 derived labels for optical/thermal views. Original reports flag 8,905 overflowing
 source boxes; later geometry processing recorded 9,064 changed boxes in 7,421
 frames, including small numerical boundary cases. These are different counters,
-not evidence that all boxes required manual relabelling. Retrieve the exact
-canonical derived targets and their provenance before a publication claim.
+not evidence that all boxes required manual relabelling. Exact frozen source
+and canonical label bytes are both included, with their separate manifest hashes.
+Do not reconstruct or substitute the canonical targets when using this record.
 
 ## Evidence versus checks performed by this preparation
 
 Preparation checks parse full metadata, preserve IDs/order/splits, enforce safe
 relative paths, validate expected counts and SHA formats, check group/content hash
-overlap, and hash the exported metadata. They do not open every image, assess
-annotation correctness, measure registration accuracy, or validate privacy.
-Historical source validation records are retained with that explicit distinction.
+overlap, and hash the exported metadata. The normal metadata validator does not
+open every image, assess annotation correctness, measure registration accuracy,
+or validate privacy. Historical source validation records retain that distinction.
+
+The separately supplied descriptive figures used a fresh read-only scan of all
+25 catalog-pinned ZIP parts, 194,140 label files and 158,281 retained image
+headers. Label hashes and archive hashes matched. Eight JPEGs require EXIF-aware
+width-height interchange; all retained dimensions then agree with the manifests.
+Figure definitions and aggregate tables are in
+[the overview figure notes](../figures/data_overview/README.md).
 
 Required additions: acquisition/sensor/Unity versions, inclusion/exclusion logic,
 annotation tools/models and review coverage, calibration/registration validation,
-stratified manual label-quality review, and full actual payload integrity checks.
+and stratified manual label-quality review. The completed byte-integrity checks
+do not establish semantic annotation accuracy.
 No new annotation quality statistics have been invented.
 
 ## Benchmark use

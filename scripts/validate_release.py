@@ -11,15 +11,10 @@ from publication import (ROOT, DATASETS, SPLITS, PRIVATE_PATTERN, check_expected
 
 
 def validate_scaffold(root=ROOT):
-    required = ["README.md", "PREPUBLICATION_CHECKLIST.md", ".gitignore", "LICENSES/README.md",
-                "docs/scientific_data_policy_review.md", "docs/data_dictionary.md",
-                "docs/reproduction_and_release.md", "docs/repository_and_deposit_layout.md",
-                "docs/methods_and_validation.md", "docs/rights_ethics_and_assets.md",
-                "manuscript/data_descriptor_outline.md", "manuscript/data_availability.template.md",
-                "manuscript/code_availability.template.md", "metadata/source_rights_review.csv",
-                "metadata/publication_status.json", "metadata/release_plan.json",
-                "templates/CITATION.cff.template", "templates/zenodo-software.json.template",
-                "templates/zenodo-public-optical.json.template", "templates/zenodo-paired-rgbt.json.template"]
+    required = ["README.md", ".gitignore", "LICENSES/README.md", "docs/data_dictionary.md",
+                "docs/DATASET_STRUCTURE_AND_METADATA.md", "docs/usage_and_validation.md",
+                "docs/methods_and_validation.md", "metadata/source_rights_review.csv",
+                "metadata/publication_status.json", "metadata/release_plan.json"]
     for dataset in DATASETS:
         required.append("schemas/" + dataset + ".schema.json")
     missing = [name for name in required if not (root / name).is_file()]

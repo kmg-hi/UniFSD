@@ -1,0 +1,742 @@
+{
+  "created_at": "2026-11-11T01:45:53.293204+09:00",
+  "sample_totals": {
+    "public_optical_images": 86563,
+    "paired_rgbt_pairs": 35859,
+    "paired_image_views": 71718
+  },
+  "negative_target_files": {
+    "public_optical": 41364,
+    "paired_canonical": 0
+  },
+  "box_statistics": {
+    "public_optical__smoke": {
+      "boxes": 45010,
+      "out_of_frame_boxes": 0,
+      "relative_width": {
+        "min": 0.0015625,
+        "p05": 0.08958333,
+        "p25": 0.215625,
+        "median": 0.39272727,
+        "p75": 0.6359375,
+        "p95": 0.98125,
+        "max": 1.0
+      },
+      "relative_height": {
+        "min": 0.0015625,
+        "p05": 0.115625,
+        "p25": 0.28571429,
+        "median": 0.440625,
+        "p75": 0.61666667,
+        "p95": 0.882145620499999,
+        "max": 1.0
+      },
+      "relative_area": {
+        "min": 2.4414062500000005e-06,
+        "p05": 0.0133146859765625,
+        "p25": 0.06505301599207977,
+        "median": 0.17287841796874998,
+        "p75": 0.36117057337499997,
+        "p95": 0.6988888877968751,
+        "max": 0.9987376013900001
+      },
+      "pixel_width": {
+        "min": 1.0,
+        "p05": 50.00000096,
+        "p25": 136.00000064,
+        "median": 240.99999840000004,
+        "p75": 399.87499520000006,
+        "p95": 718.9999992,
+        "max": 5149.9999872
+      },
+      "pixel_height": {
+        "min": 1.0,
+        "p05": 45.99999936,
+        "p25": 118.99999936,
+        "median": 218.00000096000002,
+        "p75": 351.0,
+        "p95": 547.5,
+        "max": 4104.0000144000005
+      },
+      "pixel_area": {
+        "min": 1.0000000000000002,
+        "p05": 2700.000046863,
+        "p25": 17429.9999722875,
+        "median": 55107.0001968,
+        "p75": 127000.3752505,
+        "p95": 327650.39913672,
+        "max": 12290027.070784
+      }
+    },
+    "public_optical__fire": {
+      "boxes": 67269,
+      "out_of_frame_boxes": 0,
+      "relative_width": {
+        "min": 0.0015625,
+        "p05": 0.021875,
+        "p25": 0.0515625,
+        "median": 0.10483871,
+        "p75": 0.22135417,
+        "p95": 0.534,
+        "max": 1.0
+      },
+      "relative_height": {
+        "min": 0.00294118,
+        "p05": 0.02916667,
+        "p25": 0.06666667,
+        "median": 0.1358885,
+        "p75": 0.2797619,
+        "p95": 0.64444444,
+        "max": 1.0
+      },
+      "relative_area": {
+        "min": 4.882812500000001e-06,
+        "p05": 0.0007595486484375001,
+        "p25": 0.003722726346552,
+        "median": 0.014091796875,
+        "p75": 0.05835459097576529,
+        "p95": 0.2791171887236936,
+        "max": 1.0
+      },
+      "pixel_width": {
+        "min": 0.99999744,
+        "p05": 12.0,
+        "p25": 30.0,
+        "median": 63.999999190000004,
+        "p75": 136.999998,
+        "p95": 367.00000256,
+        "max": 4756.99998732
+      },
+      "pixel_height": {
+        "min": 0.999999,
+        "p05": 11.99999944,
+        "p25": 29.0,
+        "median": 64.0000008,
+        "p75": 136.99999744,
+        "p95": 357.30000307199924,
+        "max": 4885.0000128
+      },
+      "pixel_area": {
+        "min": 0.99999644000256,
+        "p05": 167.99993289200512,
+        "p25": 931.0000000000001,
+        "median": 4125.00132,
+        "p75": 17267.25,
+        "p95": 104829.5934437761,
+        "max": 14888276.99703072
+      }
+    },
+    "paired_source__fire": {
+      "boxes": 49361,
+      "out_of_frame_boxes": 5649,
+      "relative_width": {
+        "min": 0.00736697,
+        "p05": 0.0203125,
+        "p25": 0.03125,
+        "median": 0.0421875,
+        "p75": 0.0671875,
+        "p95": 0.325177,
+        "max": 0.668903
+      },
+      "relative_height": {
+        "min": 0.026389,
+        "p05": 0.06944444,
+        "p25": 0.10902778,
+        "median": 0.14236111,
+        "p75": 0.20972222,
+        "p95": 0.534896,
+        "max": 1.0
+      },
+      "relative_area": {
+        "min": 0.00032380032299999997,
+        "p05": 0.0015972222500000002,
+        "p25": 0.0034375000000000005,
+        "median": 0.005813829427,
+        "p75": 0.0131944375,
+        "p95": 0.172446693132,
+        "max": 0.668903
+      },
+      "pixel_width": {
+        "min": 6.999454,
+        "p05": 24.0,
+        "p25": 35.000108,
+        "median": 46.0,
+        "p75": 67.0,
+        "p95": 171.37856399999998,
+        "max": 361.49999360000004
+      },
+      "pixel_height": {
+        "min": 11.000354999999999,
+        "p05": 40.121320000000004,
+        "p25": 69.50000159999999,
+        "median": 91.4999976,
+        "p75": 124.5000024,
+        "p95": 207.90509,
+        "max": 370.000332
+      },
+      "pixel_area": {
+        "min": 76.99647880616999,
+        "p05": 1014.0140400390002,
+        "p25": 2491.9977599999997,
+        "median": 4141.0000656,
+        "p75": 8496.000057600002,
+        "p95": 31032.337686653525,
+        "max": 116871.581560734
+      }
+    },
+    "paired_canonical__fire": {
+      "boxes": 49361,
+      "out_of_frame_boxes": 0,
+      "relative_width": {
+        "min": 0.00736697,
+        "p05": 0.0203125,
+        "p25": 0.03125,
+        "median": 0.0421875,
+        "p75": 0.0671875,
+        "p95": 0.325177,
+        "max": 0.668903
+      },
+      "relative_height": {
+        "min": 0.026389,
+        "p05": 0.06944444,
+        "p25": 0.10902778,
+        "median": 0.14236111,
+        "p75": 0.20972222,
+        "p95": 0.4705095,
+        "max": 0.896415
+      },
+      "relative_area": {
+        "min": 0.00032380032299999997,
+        "p05": 0.0015972222500000002,
+        "p25": 0.0034375000000000005,
+        "median": 0.00581380228125,
+        "p75": 0.013190646843749999,
+        "p95": 0.12890755692,
+        "max": 0.510681756134
+      },
+      "pixel_width": {
+        "min": 6.999454,
+        "p05": 24.0,
+        "p25": 35.000108,
+        "median": 46.0,
+        "p75": 67.0,
+        "p95": 171.37856399999998,
+        "max": 361.49999360000004
+      },
+      "pixel_height": {
+        "min": 11.000354999999999,
+        "p05": 40.121320000000004,
+        "p25": 69.50000159999999,
+        "median": 91.00000080000001,
+        "p75": 117.0,
+        "p95": 188.55404,
+        "max": 364.999986
+      },
+      "pixel_area": {
+        "min": 76.99647880616999,
+        "p05": 1014.0140400390002,
+        "p25": 2490.9999623999997,
+        "median": 4140.9742399488,
+        "p75": 8380.9998144,
+        "p95": 24440.079898151398,
+        "max": 115216.14072969
+      }
+    },
+    "paired_canonical_real__fire": {
+      "boxes": 15485,
+      "out_of_frame_boxes": 0,
+      "relative_width": {
+        "min": 0.011627,
+        "p05": 0.0393536,
+        "p25": 0.056573,
+        "median": 0.100446,
+        "p75": 0.248091,
+        "p95": 0.465324,
+        "max": 0.668903
+      },
+      "relative_height": {
+        "min": 0.027849,
+        "p05": 0.0882134,
+        "p25": 0.139999,
+        "median": 0.2828685,
+        "p75": 0.410359,
+        "p95": 0.4876145,
+        "max": 0.896415
+      },
+      "relative_area": {
+        "min": 0.00032380032299999997,
+        "p05": 0.003561181726,
+        "p25": 0.00800773268,
+        "median": 0.030158491761,
+        "p75": 0.11509534553999999,
+        "p95": 0.1985000397329999,
+        "max": 0.510681756134
+      },
+      "pixel_width": {
+        "min": 6.999454,
+        "p05": 22.999409999999997,
+        "p25": 32.999824,
+        "median": 52.459483999999996,
+        "p75": 137.75690699999998,
+        "p95": 207.999828,
+        "max": 331.08075
+      },
+      "pixel_height": {
+        "min": 11.000354999999999,
+        "p05": 33.0766236,
+        "p25": 51.0,
+        "median": 81.0,
+        "p75": 108.4998955,
+        "p95": 191.93247499999998,
+        "max": 364.999986
+      },
+      "pixel_area": {
+        "min": 76.99647880616999,
+        "p05": 807.4931378918881,
+        "p25": 1654.1502592814081,
+        "median": 4850.339127156901,
+        "p75": 18815.979276005583,
+        "p95": 30047.05032711339,
+        "max": 115216.14072969
+      }
+    },
+    "paired_source__smoke": {
+      "boxes": 32363,
+      "out_of_frame_boxes": 3267,
+      "relative_width": {
+        "min": 0.009375,
+        "p05": 0.046875,
+        "p25": 0.0703125,
+        "median": 0.10078125,
+        "p75": 0.15078125,
+        "p95": 0.2908684999999999,
+        "max": 0.659677
+      },
+      "relative_height": {
+        "min": 0.051146,
+        "p05": 0.15277778,
+        "p25": 0.23888889,
+        "median": 0.324306,
+        "p75": 0.415451,
+        "p95": 0.606771,
+        "max": 0.954167
+      },
+      "relative_area": {
+        "min": 0.0016178384999999999,
+        "p05": 0.007596303000970501,
+        "p25": 0.01745605478515625,
+        "median": 0.033641493375,
+        "p75": 0.06477948195295141,
+        "p95": 0.1321603493448,
+        "max": 0.35188569808200004
+      },
+      "pixel_width": {
+        "min": 12.0,
+        "p05": 59.0,
+        "p25": 87.0,
+        "median": 124.0,
+        "p75": 170.0,
+        "p95": 271.0,
+        "max": 517.99936
+      },
+      "pixel_height": {
+        "min": 12.837646,
+        "p05": 92.4999984,
+        "p25": 160.9999992,
+        "median": 217.8750024,
+        "p75": 289.0000008,
+        "p95": 426.8749968,
+        "max": 687.00024
+      },
+      "pixel_area": {
+        "min": 268.444566682668,
+        "p05": 6099.999860880001,
+        "p25": 14672.000109600001,
+        "median": 26795.8139472,
+        "p75": 46067.7184236576,
+        "p95": 105230.98027791355,
+        "max": 276640.04895989754
+      }
+    },
+    "paired_canonical__smoke": {
+      "boxes": 32363,
+      "out_of_frame_boxes": 0,
+      "relative_width": {
+        "min": 0.009375,
+        "p05": 0.046875,
+        "p25": 0.0703125,
+        "median": 0.10078125,
+        "p75": 0.15078125,
+        "p95": 0.290698,
+        "max": 0.6596765
+      },
+      "relative_height": {
+        "min": 0.036449,
+        "p05": 0.14931695300000003,
+        "p25": 0.23819444,
+        "median": 0.3234375,
+        "p75": 0.41452975000000003,
+        "p95": 0.6067534469999996,
+        "max": 0.954167
+      },
+      "relative_area": {
+        "min": 0.0016178384999999999,
+        "p05": 0.00755230048828125,
+        "p25": 0.01741726354296875,
+        "median": 0.033551025390624996,
+        "p75": 0.06407502082580036,
+        "p95": 0.1308033129689255,
+        "max": 0.35188569808200004
+      },
+      "pixel_width": {
+        "min": 12.0,
+        "p05": 59.0,
+        "p25": 87.0,
+        "median": 124.0,
+        "p75": 170.0,
+        "p95": 271.0,
+        "max": 517.99936
+      },
+      "pixel_height": {
+        "min": 9.148699,
+        "p05": 91.0002975,
+        "p25": 160.9999992,
+        "median": 217.4999976,
+        "p75": 289.0000008,
+        "p95": 426.8749968,
+        "max": 687.00024
+      },
+      "pixel_area": {
+        "min": 268.444566682668,
+        "p05": 6006.00231834921,
+        "p25": 14651.4560799744,
+        "median": 26640.0,
+        "p75": 46025.4996936,
+        "p95": 105230.98027791355,
+        "max": 276640.04895989754
+      }
+    },
+    "paired_canonical_real__smoke": {
+      "boxes": 3898,
+      "out_of_frame_boxes": 0,
+      "relative_width": {
+        "min": 0.042324,
+        "p05": 0.10365885000000001,
+        "p25": 0.192691,
+        "median": 0.257143,
+        "p75": 0.315615,
+        "p95": 0.400447,
+        "max": 0.6596765
+      },
+      "relative_height": {
+        "min": 0.036449,
+        "p05": 0.1252825,
+        "p25": 0.21915025000000002,
+        "median": 0.3379455,
+        "p75": 0.4017095,
+        "p95": 0.6441928999999995,
+        "max": 0.885869
+      },
+      "relative_area": {
+        "min": 0.002392618044,
+        "p05": 0.013592841917800002,
+        "p25": 0.05892374676675,
+        "median": 0.08676781861725,
+        "p75": 0.10856300481450001,
+        "p95": 0.20372721023619966,
+        "max": 0.35188569808200004
+      },
+      "pixel_width": {
+        "min": 18.918828,
+        "p05": 53.32171365000001,
+        "p25": 115.65553925,
+        "median": 155.00016,
+        "p75": 183.000459,
+        "p95": 226.43250269999982,
+        "max": 394.486547
+      },
+      "pixel_height": {
+        "min": 9.148699,
+        "p05": 31.445907499999997,
+        "p25": 75.99977750000001,
+        "median": 132.0001125,
+        "p75": 182.99993400000002,
+        "p95": 237.000117,
+        "max": 325.999792
+      },
+      "pixel_area": {
+        "min": 268.444566682668,
+        "p05": 1529.0942359789326,
+        "p25": 7860.534689318467,
+        "median": 22141.522263025618,
+        "p75": 28886.99411995488,
+        "p95": 46011.51868285789,
+        "max": 79379.78331612989
+      }
+    },
+    "paired_canonical_synthetic__fire": {
+      "boxes": 33876,
+      "out_of_frame_boxes": 0,
+      "relative_width": {
+        "min": 0.00736697,
+        "p05": 0.01875,
+        "p25": 0.028125,
+        "median": 0.03476563,
+        "p75": 0.0453125,
+        "p95": 0.0703125,
+        "max": 0.28242187
+      },
+      "relative_height": {
+        "min": 0.026389,
+        "p05": 0.06458333,
+        "p25": 0.104167,
+        "median": 0.12916667,
+        "p75": 0.16527778,
+        "p95": 0.23888889,
+        "max": 0.48819444
+      },
+      "relative_area": {
+        "min": 0.00034939231249999996,
+        "p05": 0.001318359375,
+        "p25": 0.0029687501250000004,
+        "median": 0.004420572843750001,
+        "p75": 0.007243651624999999,
+        "p95": 0.016251442958984372,
+        "max": 0.12493245190147571
+      },
+      "pixel_width": {
+        "min": 9.429721599999999,
+        "p05": 24.0,
+        "p25": 36.0,
+        "median": 44.5000064,
+        "p75": 58.0,
+        "p95": 90.0,
+        "max": 361.49999360000004
+      },
+      "pixel_height": {
+        "min": 19.00008,
+        "p05": 46.49999759999999,
+        "p25": 75.00023999999999,
+        "median": 93.00000240000001,
+        "p75": 119.0000016,
+        "p95": 172.00000079999998,
+        "max": 351.4999968
+      },
+      "pixel_area": {
+        "min": 321.99995519999993,
+        "p05": 1215.0,
+        "p25": 2736.0001152000004,
+        "median": 4073.999932800001,
+        "p75": 6675.749337599998,
+        "p95": 14977.329831,
+        "max": 115137.74767240002
+      }
+    },
+    "paired_canonical_synthetic__smoke": {
+      "boxes": 28465,
+      "out_of_frame_boxes": 0,
+      "relative_width": {
+        "min": 0.009375,
+        "p05": 0.046306719999999996,
+        "p25": 0.06679687,
+        "median": 0.09375,
+        "p75": 0.12890625,
+        "p95": 0.21786714799999998,
+        "max": 0.404687
+      },
+      "relative_height": {
+        "min": 0.06663301,
+        "p05": 0.15416667,
+        "p25": 0.23888889,
+        "median": 0.31927083,
+        "p75": 0.417361,
+        "p95": 0.60555556,
+        "max": 0.954167
+      },
+      "relative_area": {
+        "min": 0.0016178384999999999,
+        "p05": 0.0073444012734375,
+        "p25": 0.0162353506440972,
+        "median": 0.030590820421874998,
+        "p75": 0.05345920178125,
+        "p95": 0.11993977944439996,
+        "max": 0.30017366423599995
+      },
+      "pixel_width": {
+        "min": 12.0,
+        "p05": 59.2726016,
+        "p25": 85.4999936,
+        "median": 120.0,
+        "p75": 165.0,
+        "p95": 278.86994943999997,
+        "max": 517.99936
+      },
+      "pixel_height": {
+        "min": 47.97576720000001,
+        "p05": 111.0000024,
+        "p25": 172.00000079999998,
+        "median": 229.8749976,
+        "p75": 300.49992,
+        "p95": 436.0000032,
+        "max": 687.00024
+      },
+      "pixel_area": {
+        "min": 1490.9999616,
+        "p05": 6768.600213600001,
+        "p25": 14962.499153599978,
+        "median": 28192.500100799996,
+        "p75": 49268.000361599996,
+        "p95": 110536.500735959,
+        "max": 276640.04895989754
+      }
+    }
+  },
+  "verification": {
+    "label_files_sha256_checked": 194140,
+    "retained_image_headers_checked": 158281,
+    "manifests": {
+      "public_optical_release_v1": "a27433c4c3e02533b7fcf0e6f3e4330148d657e963f672456796e399b4d0f231",
+      "paired_rgbt_v1": "ae81e7bf0bc06deb6b07cb9e5fccf0076bb22dca7dad1e93dc9babe4f8f0f98a"
+    },
+    "archive_parts": [
+      {
+        "name": "public-optical-v1-part0001-metadata20261109.zip",
+        "sha256": "765298ab8f34cc8ccf093600eece5a6226bc376a093e81e22b6ad69db5699f1a",
+        "hash_checked_now": true
+      },
+      {
+        "name": "public-optical-v1-part0002.zip",
+        "sha256": "6e4e0ef8be80065765ff2f01d90736601ffc4c41efffd04c3d5d12a87010c671",
+        "hash_checked_now": true
+      },
+      {
+        "name": "public-optical-v1-part0003.zip",
+        "sha256": "5c3f022d9468aae6f2d86ec3692ebe3daeec0e262424cd302e4a1a7a46080a38",
+        "hash_checked_now": true
+      },
+      {
+        "name": "public-optical-v1-part0004.zip",
+        "sha256": "563f72d2cadb7b198564daec9ba7719cf0263a332fa7c08a011a7230785329ca",
+        "hash_checked_now": true
+      },
+      {
+        "name": "public-optical-v1-part0005.zip",
+        "sha256": "bef0466b6dd3a1f51e49617c8fba085502f06911183babdcd715273d69b83025",
+        "hash_checked_now": true
+      },
+      {
+        "name": "public-optical-v1-part0006.zip",
+        "sha256": "2fe5473a452e0b3bf412f3957b75e5533f2ce9c5fa6d0fe0a52c76da6007e14d",
+        "hash_checked_now": true
+      },
+      {
+        "name": "public-optical-v1-part0007.zip",
+        "sha256": "c19665397f32aed6c0dbaa274363ef12cd56329f808fe86c9b1953ca0f96c4fa",
+        "hash_checked_now": true
+      },
+      {
+        "name": "public-optical-v1-part0008.zip",
+        "sha256": "d0d1c182c684225511270881dedb8f9a8eb67a0c3f89cb748d76ac2c288dfaf6",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0001-metadata20261109.zip",
+        "sha256": "b4924597384d2865d734a88a792dd071a9bce600ec861f435a0d5bf2c417fb8c",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0002.zip",
+        "sha256": "13b07c52136cd5a6dde1e34e64ed2a7ea5a627c2ffc26c47876f9cdfe87c409f",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0003.zip",
+        "sha256": "3b77286bef7fd9180b0990cc2a5edf3619511b930db6f5cbdb0b8e71da490542",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0004.zip",
+        "sha256": "54b28ba11207f6375d5c17f5b4e729dbe08909be2c984a7ce7a670c70c859b68",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0005.zip",
+        "sha256": "62597c55f511c61f88252c6dcf3a38125b33b8d41ef88285fa647166a7a638fc",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0006.zip",
+        "sha256": "676468b7f14d4c943dc445b609052c0aa00ba0b979b25d6d7e595e2f8f98c5ef",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0007.zip",
+        "sha256": "27e2fd0c029e084c6713ffa46c93488075a799c65daadc2c50af79a66e5ce7e4",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0008.zip",
+        "sha256": "5af0c7e7bcfa2471802930cee5184b9f7996cb0891a713fcb226fee9ccaef218",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0009.zip",
+        "sha256": "7e3306322b68d8c95ad968cd1e13b82dd70926eae4a2df481d08bddca34b18f4",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0010.zip",
+        "sha256": "851f2aceab7f8a615910ed6cbbd44528c50c93e87fbf414fac47faa6a8620947",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0011.zip",
+        "sha256": "e863b8b59bcc603c2ee7b5e296e2c15bc60faeef1c1363cab3164a18ddafc367",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0012.zip",
+        "sha256": "28b87900b00be5761a2eb47f4db57f65d3490c2945bf58c23eb7523739ffc73d",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0013.zip",
+        "sha256": "36120255f293aa07ce9b00088820322a88ca9c14e33ae8e8abb29c0524be2f6c",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0014.zip",
+        "sha256": "b3217ccdf1a4ea6971c90f46a8dcfe8ebd4aca1cc2a51f9b88b6fe91513c0251",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0015.zip",
+        "sha256": "cd1091f7ce7b52c8007cb0be3d1535d01ced8789d63a96471a93c2f99f2f80d8",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0016.zip",
+        "sha256": "4aff1b5970538abfc654b887af1c84576414cf78b16b156feaab99faa9585a9b",
+        "hash_checked_now": true
+      },
+      {
+        "name": "paired-rgbt-v1-part0017.zip",
+        "sha256": "1db51be7afa6036d873776c322940c83ce64419b64a124facb25406815c5dd49",
+        "hash_checked_now": true
+      }
+    ],
+    "exif_swapped_images": 8,
+    "manifest_vs_oriented_image_size_mismatches": 0
+  },
+  "definitions": {
+    "normalised_box_area": "width * height in YOLO normalised coordinates; image-area fraction",
+    "image_resolution": "EXIF-orientation-aware retained image size when image headers are checked; otherwise recorded manifest size",
+    "paired_primary_boxes": "canonical optical targets counted ONCE per pair, not once per modality",
+    "paired_source_boxes": "original source rectangles, retained unmodified even when extending outside the frame",
+    "pixel_area": "normalised box area times retained optical width times retained optical height",
+    "scope": "All frozen train/validation/test samples; not model performance or a new split",
+    "out_of_frame_box": "a rectangle edge crosses [0,1] by more than 1e-6 in normalised coordinates"
+  },
+  "annotation_bytes_changed": false,
+  "manifest_bytes_changed": false
+}

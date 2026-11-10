@@ -1,11 +1,8 @@
 import csv
-import contextlib
-import io
 import json
 import sys
 import tempfile
 import unittest
-import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
@@ -16,8 +13,6 @@ from publication import (ROOT, DATASETS, REQUIRED_BLOCKERS, check_expected,
                          read_json, read_schema, safe_relative, sanitize_registration,
                          sha256, summarise_manifest, validate_row, verify_checksums,
                          verify_payload, write_csv, write_json, write_rights_review_queue)
-from prepare_metadata import export_paired
-from package_deposit import main as package_main
 from validate_release import validate_scaffold
 
 
@@ -49,22 +44,16 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(validate_scaffold()["scaffold"], "PASS")
 
     def test_release_display_names_preserve_record_identifiers(self):
-        records = (
-            ("public_optical_release_v1", "unified single-modal optical dataset",
-             "zenodo-public-optical.json.template", "public_optical.md"),
-            ("paired_rgbt_v1", "multi-modal optical\u2013thermal paired dataset",
-             "zenodo-paired-rgbt.json.template", "paired_rgbt.md"),
-        )
+        records = (("public_optical_release_v1", "unified single-modal optical dataset"),
+                   ("paired_rgbt_v1", "multi-modal optical\u2013thermal paired dataset"))
         self.assertEqual(DATASETS, tuple(record[0] for record in records))
         plan = read_json(ROOT / "metadata/release_plan.json")
-        for identifier, title, template, card in records:
+        for identifier, title in records:
             with self.subTest(dataset=identifier):
                 self.assertEqual(plan["datasets"][identifier]["title"], title)
-                self.assertEqual(read_json(ROOT / "templates" / template)["title"], title)
-                card_text = (ROOT / "dataset_cards" / card).read_text(encoding="utf-8")
-                self.assertEqual(card_text.splitlines()[0], "# " + title)
-                self.assertIn(f"`{identifier}`", card_text)
-                self.assertIn(title, (ROOT / "GITHUB_README_DRAFT.md").read_text(encoding="utf-8"))
+                readme = (ROOT / "README.md").read_text(encoding="utf-8")
+                self.assertIn(f"`{identifier}`", readme)
+                self.assertIn(title, readme)
 
     def test_safe_path(self):
         self.assertEqual(safe_relative("images/test/a.jpg"), "images/test/a.jpg")
@@ -74,31 +63,13 @@ class PublicationTests(unittest.TestCase):
         for dataset, directory in zip(DATASETS, ("public optical", "paired_RGBT")):
             with self.subTest(dataset=dataset):
                 self.assertEqual(deposit_root(self.root, dataset, plan), self.root / directory)
-                card = "public_optical.md" if dataset == DATASETS[0] else "paired_rgbt.md"
-                self.assertIn(f"`{directory}/`", (ROOT / "dataset_cards" / card).read_text(encoding="utf-8"))
+                self.assertIn(f"`{directory}/`", (ROOT / "README.md").read_text(encoding="utf-8"))
 
     def test_release_root_rejects_nested_or_unsafe_names(self):
         for directory in ("nested/folder", "../outside", "/absolute", "C:/outside", "a\\b", "a\nb", ""):
             plan = {"datasets": {DATASETS[0]: {"directory": directory}}}
             with self.subTest(directory=directory), self.assertRaises(ValueError):
                 deposit_root(self.root, DATASETS[0], plan)
-
-    def test_metadata_preview_keeps_requested_top_level_folders(self):
-        plan = read_json(ROOT / "metadata/release_plan.json")
-        write_json(self.root / "metadata/release_plan.json", plan)
-        for dataset in DATASETS:
-            base = deposit_root(self.root / "data_deposit", dataset, plan)
-            write_json(base / "metadata/classes.json", {"0": "fire", "1": "smoke"})
-            (base / "README.md").write_text("Incomplete test fixture\n", encoding="utf-8")
-            make_checksums(base)
-            with patch("package_deposit.ROOT", self.root), patch.object(
-                    sys, "argv", ["package_deposit.py", dataset, "--metadata-only"]), contextlib.redirect_stdout(io.StringIO()):
-                package_main()
-            output = self.root / "archives" / (dataset + "-INCOMPLETE-METADATA-PREVIEW.zip")
-            with zipfile.ZipFile(output) as archive:
-                self.assertEqual(set(archive.namelist()), {
-                    "INCOMPLETE_NOT_FOR_DATA_PUBLICATION.txt", base.name + "/README.md",
-                    base.name + "/metadata/classes.json"})
 
     def test_distribution_omits_auxiliary_files_without_touching_internal_copies(self):
         write_json(self.root / "metadata/classes.json", {"0": "fire", "1": "smoke"})
@@ -228,40 +199,6 @@ class PublicationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Missing or changed"):
             verify_payload(self.root, DATASETS[0])
 
-    def paired_fixture(self):
-        source, output = self.root / "source", self.root / "output"
-        source.mkdir()
-        row = {"id": "synthetic:sample", "domain": "synthetic", "experiment": "exp", "stem": "sample",
-               "split": "test", "image_sizes": {"optic": [1280, 720], "thermal_registered": [1280, 720]},
-               "release_optic_path": "dataset/synthetic/exp/pair_optic/sample.png",
-               "release_thermal_path": "dataset/synthetic/exp/pair_thermal/sample.png",
-               "release_label_path": "dataset/synthetic/exp/pair_label/sample.txt",
-               "optic_sha256": "a" * 64, "thermal_sha256": "b" * 64, "label_sha256": "c" * 64,
-               "fire_boxes": 1, "smoke_boxes": 2, "label_basis": "optic",
-               "private_path": "PRIVATE_SOURCE_PATH_NOT_EXPORTED"}
-        (source / "pairs.jsonl").write_text(json.dumps(row) + "\n", encoding="utf-8")
-        for name in ("registration_config.json", "split_summary.json", "validation.json"):
-            write_json(source / name, {})
-        return source, output
-
-    def test_paired_source_and_derived_gt_not_conflated(self):
-        source, output = self.paired_fixture()
-        export_paired(source, output, sha256(source / "pairs.jsonl"))
-        with (output / "metadata/manifest.csv").open(encoding="utf-8", newline="") as stream:
-            row = next(csv.DictReader(stream))
-        self.assertEqual(row["source_label_sha256"], "c" * 64)
-        self.assertEqual(row["training_label_sha256"], "")
-        self.assertNotEqual(row["source_label_path"], row["training_optic_label_path"])
-        self.assertNotIn("PRIVATE_SOURCE", json.dumps(row))
-        with self.assertRaisesRegex(ValueError, "Missing or changed payload"):
-            verify_payload(output, DATASETS[1])
-
-    def test_frozen_paired_manifest_pin_enforced(self):
-        source, output = self.paired_fixture()
-        with self.assertRaisesRegex(ValueError, "Frozen paired"):
-            export_paired(source, output, "0" * 64)
-        self.assertFalse(output.exists())
-
     def test_publication_is_blocked_in_draft(self):
         plan = read_json(ROOT / "metadata/release_plan.json")
         status = read_json(ROOT / "metadata/publication_status.json")
@@ -273,12 +210,6 @@ class PublicationTests(unittest.TestCase):
         plan = read_json(ROOT / "metadata/release_plan.json")
         status = {"publication_ready": True, "reviewed_by": "fixture", "reviewed_at": "fixture", "blockers": []}
         self.assertTrue(any("categories" in issue for issue in publication_blockers(plan, status, [])))
-
-    def test_templates_do_not_invent_creators(self):
-        for path in (ROOT / "templates").glob("zenodo-*.json.template"):
-            data = read_json(path)
-            self.assertEqual(data["creators"], [])
-            self.assertIsNone(data["license"])
 
     def test_text_false_does_not_count_as_review_approval(self):
         plan = read_json(ROOT / "metadata/release_plan.json")
@@ -299,12 +230,14 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(queue[0]["clearance"], "PENDING")
 
     def test_required_derived_hash_not_copied_from_source(self):
-        source, output = self.paired_fixture()
-        export_paired(source, output, sha256(source / "pairs.jsonl"))
         from publication import payload_entries
-        with (output / "metadata/manifest.csv").open(encoding="utf-8", newline="") as stream:
-            row = next(csv.DictReader(stream))
+        row = {"optic_path": "optic/a.jpg", "optic_sha256": "a"*64,
+               "thermal_path": "thermal/a.jpg", "thermal_sha256": "b"*64,
+               "source_label_path": "source/a.txt", "source_label_sha256": "c"*64,
+               "training_optic_label_path": "labels/optic/a.txt",
+               "training_thermal_label_path": "labels/thermal/a.txt", "training_label_sha256": ""}
         entries = payload_entries(row, DATASETS[1])
+        self.assertEqual(entries[2][1], "c"*64)
         self.assertEqual(entries[-1][1], "")
         self.assertEqual(entries[-2][1], "")
 

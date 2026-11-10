@@ -1,0 +1,9 @@
+directory,image_path,manifest_width,manifest_height,encoded_width,encoded_height,exif_orientation,oriented_width,oriented_height,manifest_matches_oriented
+public optical,images/val/FASDD_CV__all__neitherFireNorSmoke_CV011441.jpg,512,334,334,512,8,512,334,True
+public optical,images/train/FASDD_CV__all__neitherFireNorSmoke_CV017976.jpg,800,580,580,800,6,800,580,True
+public optical,images/val/FASDD_CV__all__neitherFireNorSmoke_CV022240.jpg,240,426,426,240,6,240,426,True
+public optical,images/train/FASDD_CV__all__neitherFireNorSmoke_CV035162.jpg,1893,1280,1280,1893,8,1893,1280,True
+public optical,images/train/FASDD_CV__all__neitherFireNorSmoke_CV038860.jpg,2424,800,800,2424,8,2424,800,True
+public optical,images/test/FASDD_CV__all__neitherFireNorSmoke_CV039130.jpg,1920,1080,1080,1920,8,1920,1080,True
+public optical,images/test/FASDD_CV__all__neitherFireNorSmoke_CV039180.jpg,1920,1080,1080,1920,8,1920,1080,True
+public optical,images/train/D-Fire__train__WEB02822.jpg,1600,1200,1200,1600,6,1600,1200,True

@@ -2,7 +2,7 @@
 
 기준: 2026-11-09 배포 구성 수정본.
 
-이 문서는 논문의 Figure 6, Data Records와 GitHub 다운로드 구조를 설명합니다.
+이 문서는 데이터 폴더, metadata와 GitHub 다운로드 구조를 설명합니다.
 저장소와 데이터 ZIP은 비공개 준비본입니다. 공개 배포 권한이나 최종 라이선스가
 확정됐다는 의미는 아닙니다.
 
@@ -77,9 +77,9 @@ paired_RGBT/
 `-- PAYLOAD_FILES.csv
 ```
 
-Figure 6은 위 구조의 핵심 경로를 보여주는 개요도이며, 모든 보조 파일을
-열거한 그림은 아닙니다. 수정본은 [편집 가능한 그림](../manuscript/figures/Figure6_Editable_Directory_Structure_20261109.pptx)과
-[그림 미리보기](../manuscript/figures/Figure6_20261109.png)에서 확인할 수 있습니다.
+구조도는 위 구조의 핵심 경로를 보여주는 개요도이며, 모든 보조 파일을
+열거한 그림은 아닙니다. [편집 가능한 그림](../figures/directory_structure/Figure6_Editable_Directory_Structure_20261109.pptx)과
+[그림 미리보기](../figures/directory_structure/Figure6_20261109.png)에서 확인할 수 있습니다.
 
 ## 3. Metadata 파일별 내용
 
@@ -164,34 +164,4 @@ class_id x_center y_center width height
 이전 첫 번째 ZIP과 수정본을 섞지 않고, 모든 ZIP을 같은 새 빈 폴더에 풉니다.
 기존 폴더에 덮어 풀기만 하면 이번에 제외한 파일이 남을 수 있습니다.
 나머지 23개 ZIP의 이미지·라벨 내용은 변경하지 않았습니다.
-
-## 7. 논문용 Data Records 문안
-
-The datasets comprise two records: the unified single-modal optical dataset,
-stored under `public optical/`, and the multi-modal optical–thermal paired
-dataset, stored under `paired_RGBT/`. In the single-modal record, optical images
-and corresponding YOLO annotations are organised under
-`images/{train,val,test}/` and `labels/{train,val,test}/`, respectively.
-The paired record organises retained optical views, processed thermal views and
-source annotations under `dataset/{real,synthetic}/{experiment}/`, using
-`pair_optic/`, `pair_thermal/` and `pair_label/` subdirectories.
-Canonical model-training annotations are stored separately under
-`labels/{optic,thermal}/{real,synthetic}/{experiment}/`.
-
-Both records include `metadata/` and `splits/` directories containing
-sample manifests, class definitions, dataset summaries, provenance records and
-frozen training, validation and test assignments. Each optical–thermal pair has
-a common sample identifier. The paired manifest distinguishes source annotations
-from canonical training annotations and retains their respective integrity
-fields, `source_label_sha256` and `training_label_sha256`.
-Figure 6 illustrates the principal directory structure after extraction of all
-archive parts. Auxiliary provenance and inventory files are omitted from the
-diagram for clarity.
-
-## 8. Figure 6 caption
-
-Fig. 6. Principal directory structures after archive extraction:
-(a) the unified single-modal optical dataset and
-(b) the multi-modal optical–thermal paired dataset.
-Additional provenance and inventory files are omitted for clarity.
 

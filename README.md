@@ -1,310 +1,150 @@
-# Unified Single-Modal and Multi-Modal Fire and Smoke Datasets
+# Unified Fire and Smoke Datasets
 
-**Publication draft: no public dataset download is available yet.**
+Two curated records for optical and optical-thermal fire/smoke detection.
+The repository contains documentation, metadata, frozen split assignments and
+read-only validation tools. Images and labels are distributed as separate ZIP
+attachments, not ordinary Git files.
 
-This project brings together two distinct fire and smoke detection resources:
+**Status:** author-approved private distribution. The repository and dataset
+drafts remain private. Public redistribution rights, final licences, author
+information and dataset DOIs are still under review.
 
-- **unified single-modal optical dataset:** a curated collection of optical images from four public sources.
-- **multi-modal optical–thermal paired dataset:** corresponding optical and processed thermal images from real-world experiments and Unity simulations.
+## Datasets
 
-This private preparation repository is being assembled for documentation,
-metadata, validation utilities, and the original retained image and annotation
-files of both datasets. The author-approved private data transfer is complete.
-The project title, authors, licences, public download locations, and citation identifiers
-have not yet been finalised. The folder names below describe the planned release
-layout, not a claim that the image and annotation payloads are already available.
-
-## Dataset overview
-
-| Dataset | Sample unit | Train | Validation | Test | Total |
+| Record | Root folder | Train | Validation | Test | Total |
 |---|---|---:|---:|---:|---:|
-| unified single-modal optical dataset | One optical image | 68,475 | 8,714 | 9,374 | 86,563 |
-| multi-modal optical–thermal paired dataset | One optical-thermal pair | 28,811 | 3,524 | 3,524 | 35,859 |
+| unified single-modal optical dataset | `public optical/` | 68,475 | 8,714 | 9,374 | 86,563 images |
+| multi-modal optical–thermal paired dataset | `paired_RGBT/` | 28,811 | 3,524 | 3,524 | 35,859 pairs |
 
-The publication-facing names were updated on 2026-11-04. The stable record
-identifiers remain `public_optical_release_v1` and `paired_rgbt_v1`, respectively.
-Their release root directories are `public optical/` and `paired_RGBT/`,
-respectively; these folder names are distinct from the stable record identifiers.
-Public Optical and Paired RGB-T are previous short names used in historical
-documentation; the renaming does not change file contents, annotations, or split membership.
+The stable identifiers are `public_optical_release_v1` and `paired_rgbt_v1`.
+Folder names are case-sensitive; `public optical` contains a space.
 
-### unified single-modal optical dataset
+The optical record retains FASDD_CV 66,480 images, D-Fire 6,288, CQU 6,244 and
+Roboflow_FireSmoke 7,551. DFS is excluded. It contains 112,279 boxes:
+67,269 Fire and 45,010 Smoke. Its 41,364 zero-box images have empty labels;
+these are annotation-negative samples, not independently verified absence of
+every possible fire or smoke phenomenon.
 
-| Retained source | Images |
-|---|---:|
-| FASDD_CV | 66,480 |
-| D-Fire | 6,288 |
-| CQU | 6,244 |
-| Roboflow_FireSmoke | 7,551 |
-| **Total** | **86,563** |
+The paired record contains 15,238 real and 20,621 Unity-synthetic pairs,
+or 71,718 image views, from 66 real and 21 synthetic experiments.
+Each pair preserves optical/thermal correspondence. Optic-only and thermal-only
+experiments on this record use the same pair membership and targets.
+They are **not** the separate 86,563-image optical record.
 
-This version contains 112,279 annotated boxes: 67,269 Fire and 45,010 Smoke.
-There are 41,364 images with zero annotated target boxes. These are designated
-negative samples; that designation is not an independent guarantee that every
-possible fire or smoke phenomenon is absent. DFS is excluded from this version.
+## Download
 
-### multi-modal optical–thermal paired dataset
+| Data | Private download | ZIP parts |
+|---|---|---:|
+| Optical | [Dataset attachments](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b) | 8 |
+| Optical-thermal | [Dataset attachments](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6) | 17 |
 
-| Domain | Train pairs | Validation pairs | Test pairs | Total pairs |
-|---|---:|---:|---:|---:|
-| Real | 12,190 | 1,524 | 1,524 | 15,238 |
-| Unity synthetic | 16,621 | 2,000 | 2,000 | 20,621 |
-| **Total** | **28,811** | **3,524** | **3,524** | **35,859** |
+1. Download every ZIP named in the dataset's `*-archives.json` catalog.
+2. Use the revised first part containing `metadata20261109`; do not mix it with
+   the superseded first part.
+3. Extract all parts into one **new empty parent directory**. Do not concatenate
+   ZIPs. Extracting over an older directory does not remove obsolete files.
+4. Resolve manifest paths relative to the appropriate dataset root.
 
-The paired collection contains 71,718 image views from 66 real and 21 synthetic
-experiments. Every retained pair has at least one source-annotated target.
-The 20,621 synthetic pairs were selected from 21,000 candidates by excluding
-206 reviewed-empty and 173 unlabelled samples; these exclusions are not a count
-of perceptual duplicates removed.
+The catalog records ZIP sizes and SHA-256. `PAYLOAD_FILES.csv` records the
+retained image/annotation file paths, sizes and hashes. Manifests retain their
+hash fields. Standalone checksum-list files and the registration JSON are not
+included in the current distribution.
 
-Optic-only, thermal-only, and optical-thermal experiments on the paired dataset
-use the same pair membership, frozen splits, and common derived targets.
-**Paired optic-only experiments are not the separate unified single-modal optical dataset.**
+The full image/label tree appears only after ZIP extraction. GitHub's
+**Code > Download ZIP** does not contain the dataset images or labels.
 
-## Data access and release status
-
-| Resource | Current status | Download / identifier |
-|---|---|---|
-| unified single-modal optical dataset archives | Private upload complete: 8 verified ZIP parts; not publicly released | [Private draft assets](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b) |
-| multi-modal optical–thermal paired dataset archives | Private upload complete: 17 verified ZIP parts; not publicly released | [Private draft assets](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6) |
-| Dataset version DOIs | Not assigned | Not assigned |
-| Paper | Manuscript preparation | Not assigned |
-
-The repository's `public optical/` and `paired_RGBT/` directories contain the
-dataset metadata, frozen split lists, and payload inventories. The actual retained
-images, source annotations, and canonical training annotations are available as
-independently readable ZIP parts attached to unpublished drafts in this same
-private repository, not as ordinary Git blobs or metered Git LFS objects.
-Download all numbered parts for a dataset, verify their archive checksums, and
-extract every part into the same parent directory. Do not concatenate the ZIPs.
-Both private transfers are complete: all 25 ZIP parts and four archive-catalog
-and download-note assets were uploaded and their server SHA-256 values
-verified. They cover 352,421 frozen image/annotation files, plus metadata. No paid
-capacity is enabled. Verification is recorded in `metadata/private_transfer_status.json`.
-Private draft locations:
-[public optical](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-83bf651c3c7c7f34d35b),
-[paired_RGBT](https://github.com/kmg-hi/unified-fire-smoke-datasets/releases/tag/untagged-d38a0decc3241fd55fa6).
-A future public release still requires component rights/privacy review, final
-licences, a suitable persistent dataset record, and version-specific identifiers.
-
-## Intended repository layout
-
-Companion documentation and metadata are provided in the directories
-below. Image and annotation payloads are in the separate private ZIP attachments.
-
-```text
-README.md                         Dataset introduction and access information
-dataset_cards/                    Dataset-specific descriptions and limitations
-docs/                             Layout, field definitions, methods, and release notes
-metadata/                         Preparation status, overview, and rights review tables
-schemas/                          Manifest field definitions
-scripts/                          Metadata preparation and validation utilities
-tests/                            Tests for the preparation utilities
-templates/                        Unfinished citation and deposit metadata templates
-LICENSES/                         Licensing guidance; final terms still pending
-public optical/                   Single-modal metadata, splits, and payload inventory
-paired_RGBT/                      Paired metadata, splits, and payload inventory
-```
-
-This README remains a preparation draft, not a dataset release announcement.
-Private local configuration, credentials, research logs, and model weights are
-excluded. Manuscript working files require a separate review. Original retained
-images and labels are within the approved private upload scope, but require a
-separate, storage-aware transfer step rather than an unreviewed regular-Git push.
-
-## Planned dataset archive layouts
-
-The two dataset archives are separate from the companion repository:
+## Layout and Annotations
 
 ```text
 public optical/
-  README.md
   images/{train,val,test}/
   labels/{train,val,test}/
   metadata/
-    manifest.csv
-    classes.json
-    summary.json
-    ...
   splits/{train,val,test}.txt
+  PAYLOAD_FILES.csv
 
 paired_RGBT/
-  README.md
   dataset/{real,synthetic}/{experiment}/
     pair_optic/
     pair_thermal/
     pair_label/
   labels/{optic,thermal}/{real,synthetic}/{experiment}/
   metadata/
-    manifest.csv
-    classes.json
-    summary.json
-    ...
   splits/{train,val,test}.txt
+  PAYLOAD_FILES.csv
 ```
 
-Image and annotation directories appear after all private ZIP parts are extracted;
-they are not included as ordinary Git files in the repository tree.
-Paths inside each manifest are relative to its dataset root. Quote paths containing
-the space in `public optical` when using command-line tools. Preparation scripts
-still accept stable record identifiers and resolve folder names from `metadata/release_plan.json`.
-`PAYLOAD_FILES.csv` records payload paths, sizes and expected hashes. The archive
-catalogs record verified ZIP sizes and SHA-256 values. The 2026-11-09 revision
-omits standalone checksum lists and the camera-registration JSON from both Git
-and the ZIP parts. Manifest hash fields, all payload bytes and internal validation
-records remain unchanged. Extract revised archives into an empty folder.
+YOLO training labels use `class_id x_center y_center width height`, with
+normalised coordinates and `0=fire`, `1=smoke`.
+An empty label file contains zero annotated objects.
 
-## Sample identifiers and correspondence
+In the paired record, `pair_label/` preserves original source rectangles.
+`labels/{optic,thermal}/` contains the actual frozen common derived training
+targets. Source and training annotations may differ due to boundary clipping;
+do not substitute them. Their hashes are recorded separately as
+`source_label_sha256` and `training_label_sha256`.
 
-The single-modal record uses stable retained identifiers such as `POU000001`; the manifest
-also retains source collection and source-relative identifiers. An example
-image-label path pair recorded in the manifest is:
+Each split file lists stable sample identifiers, one per line, rather than
+image paths. Preserve these frozen assignments for benchmark reproduction.
 
-```text
-images/train/FASDD_CV__all__bothFireAndSmoke_CV000000.jpg
-labels/train/FASDD_CV__all__bothFireAndSmoke_CV000000.txt
-```
+## Documentation and Figures
 
-The paired record uses a domain-qualified `sample_id`, for example:
+- [Folder structure and metadata](docs/DATASET_STRUCTURE_AND_METADATA.md)
+- [Manifest field definitions](docs/data_dictionary.md)
+- [Curation methods and limitations](docs/methods_and_validation.md)
+- [Download, validation and figure reproduction](docs/usage_and_validation.md)
+- [Dataset overview figures and underlying statistics](figures/data_overview/README.md)
+- [Directory-structure figure](figures/directory_structure/Figure6_20261109.png)
 
-```text
-real:230714_3m_nan/230714_3m_nan_pair_00001
-```
+`schemas/` defines manifest fields; `scripts/` and `tests/` provide
+read-only checks and descriptive figure generation. `metadata/` retains source,
+version and rights-review records. It is not evidence that publication approval
+has been granted.
 
-Its optical image, thermal image, and source annotation share the stem
-`230714_3m_nan_pair_00001` within the same domain and experiment. Use `sample_id`
-as a manifest key, not as a literal filesystem path. Paths in the manifests are
-relative to their dataset archive root and use `/` separators.
+## Validation
 
-## Annotation format
-
-Model-training annotations use one object per line in YOLO text format:
-
-```text
-class_id x_center y_center width height
-```
-
-| Class identifier | Class |
-|---|---|
-| 0 | Fire |
-| 1 | Smoke |
-
-Coordinates are normalised by image width and height. An empty training label
-file represents zero annotated boxes. Do not infer that both dataset versions
-retain background-only samples: the paired version contains only source-positive
-pairs.
-
-In the paired record, `pair_label/` preserves source annotations, while
-`labels/{optic,thermal}/` is reserved for the actual canonical derived training
-annotations. Real source boxes extending beyond the visible frame were clipped
-for the common training targets. Source and training annotation files must not be
-silently substituted for one another.
-
-`source_label_sha256` records source-label integrity. The separate
-`training_label_sha256` field in the private-transfer manifest is populated from
-the existing frozen training artifact, with every restored label's bytes checked
-against its original SHA-256. Older metadata-only previews left this field blank.
-Source hashes were not substituted and ground truth was not regenerated.
-Synthetic annotations were model assisted; the full annotation and review
-protocol remains to be documented.
-
-## Frozen dataset partitions
-
-- The single-modal record: 5,845 filename-derived sequence groups, seed `20260924`.
-- The paired record: 87 domain-and-experiment groups, seed `20261025`.
-- No group occurs in more than one split in the exported manifests.
-- Group separation does **not** establish complete scene independence.
-
-Each `splits/*.txt` file lists frozen sample identifiers, one per line, rather
-than image paths. Keep these assignments when reproducing the reported
-benchmarks. Do not create new random splits as part of downloading or unpacking
-the data. Independent new experiments should identify any changed partition
-scheme explicitly.
-
-## Quick start
-
-### Metadata preparation checks available now
-
-The included preparation utilities use Python 3.10 or later and the standard
-library. From the companion repository root:
+Python 3.10 or later is sufficient for metadata validation; no third-party
+packages are needed for these commands:
 
 ```bash
 python -B -m unittest discover -s tests -v
-python -B scripts/validate_release.py --mode scaffold
 python -B scripts/validate_release.py --mode metadata
 ```
 
-Metadata validation uses the two dataset root folders when present in the
-repository; the earlier local `data_deposit/` layout is also supported.
-Cloning the repository does not supply the actual image/annotation payloads:
-download and extract every private ZIP part before requesting payload verification.
-See the [reproduction and release notes](docs/reproduction_and_release.md) for
-the preparation workflow. Source paths and local configuration must never be
-published with the repository.
+After extracting the payload, `--verify-files` also checks every image/label
+against the manifest hash. See the usage guide for dataset locations and
+optional plotting dependencies.
 
-These commands do not download data, train a model, or verify every payload file.
-The publication validator currently blocks release because review and payload
-requirements are unfinished. Original processing, training, and inference
-workflows still require separately reviewed, portable instructions; no working
-end-to-end training command is claimed here.
+These utilities are not a complete portable reproduction of the original
+capture, curation, registration or annotation-generation pipeline.
+No training or model evaluation runs as part of validation.
 
-### Dataset use after publication
+## Limitations
 
-1. Download the approved archive version from its dataset record.
-2. Verify the supplied archive checksums and extract the documented directory tree.
-3. Resolve manifest paths from the appropriate dataset root.
-4. Select samples using the published split identifiers and preserve optical-thermal correspondence.
-5. Use canonical derived training labels for benchmark reproduction, retaining source annotations for provenance.
+- Filename-group or experiment-group separation does not establish independent
+  scenes or exhaustive semantic deduplication. Cross-record overlap has not been
+  jointly audited.
+- Paired thermal views are processed/registered colour images, not calibrated
+  temperature measurements. Reference-plane registration retains parallax at
+  other depths; removing the distribution configuration does not undo processing.
+- Synthetic annotations were model assisted; they are not wholly independent
+  manually drawn ground truth.
+- Real held-out paired test data contain Fire 2,264 / Smoke **0** source boxes.
+  Synthetic test data contain Fire 3,738 / Smoke 2,298. Real-Smoke test
+  generalisation cannot be inferred.
+- The optical record's test labels contain Fire 5,485 / Smoke 4,307 boxes.
+  Do not merge its test with the paired record's optic-only benchmark.
 
-## Metadata and technical notes
+## Attribution, Licensing and Citation
 
-The [data dictionary](docs/data_dictionary.md) explains manifest fields, class
-mapping, label provenance, and the distinction between recorded and newly
-verified hashes. See also:
+Final data/code licences and dataset DOIs are pending.
+See [licensing notes](LICENSES/README.md), the source registry and the
+source-rights records in each dataset's metadata directory. Public availability
+of an input collection is not itself redistribution permission.
+No blanket licence is granted by this preparation repository.
 
-- [unified single-modal optical dataset card](dataset_cards/public_optical.md)
-- [multi-modal optical–thermal paired dataset card](dataset_cards/paired_rgbt.md)
-- [Dataset and deposit layout](docs/repository_and_deposit_layout.md)
-- [Dataset structure, metadata and revised Figure 6](docs/DATASET_STRUCTURE_AND_METADATA.md)
-- [Methods and validation notes](docs/methods_and_validation.md)
-- [Source and rights review](docs/rights_ethics_and_assets.md)
+Cite the exact dataset version, its original component sources and the
+accompanying article when final identifiers are available. No placeholder DOI,
+author list or contact address is presented as final.
 
-### Important limitations
-
-- The real held-out test subset has Fire annotations but **no Smoke ground-truth boxes**. It cannot establish real-world test Smoke performance.
-- Registered Unity thermal views are processed colour images, not calibrated temperature measurements. Reference-plane registration leaves residual parallax at other depths.
-- Synthetic labels are model assisted, not fully independent manually drawn ground truth.
-- Filename- or experiment-level separation is not a guarantee of scene-disjoint evaluation or exhaustive semantic deduplication.
-- The two dataset versions have not been jointly audited for cross-release content overlap.
-- Existing source validation records are historical evidence, not a fresh integrity or annotation-quality audit of a publication payload.
-
-## Licensing and source attribution
-
-**Final data and code licences have not been assigned.** Public availability of
-source images is not, by itself, redistribution permission. Component-level
-terms and attribution must be checked for FASDD_CV, D-Fire, CQU, and
-Roboflow_FireSmoke. Excluding DFS does not clear the remaining sources.
-
-Real capture permissions, privacy/ethics requirements, and Unity rendered-output
-rights also require review. The licences for images, annotations, newly prepared
-metadata, and code must be stated separately where their terms differ. No blanket
-permission or common dataset-wide licence is granted by this draft.
-
-The [prepublication checklist](PREPUBLICATION_CHECKLIST.md) and
-[licensing notes](LICENSES/README.md) track the work needed before release.
-
-## Citation
-
-The dataset version DOIs, final paper citation, author list, and root
-`CITATION.cff` are pending. Do not cite placeholder identifiers or describe this
-draft as a published dataset. The final repository should cite the exact data
-versions, their original component sources, and the accompanying paper when
-available.
-
-## Contact and contributions
-
-Maintainer details and an approved contact address will be added after author
-review. Once the repository is established, report problems with the dataset
-version, sample identifier, and a reproducible description. Proposed corrections
-must preserve prior release history and document any changes to annotations or
-split membership.
+Version changes are recorded in [CHANGELOG.md](CHANGELOG.md).

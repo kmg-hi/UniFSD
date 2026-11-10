@@ -25,4 +25,5 @@ __pycache__/
 *.avi
 **/*SHA256SUMS*.txt
 **/registration.public.json
-!manuscript/figures/Figure6_20261109.png
+!figures/directory_structure/Figure6_20261109.png
+!figures/data_overview/*.png
