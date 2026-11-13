@@ -45,6 +45,13 @@ standalone list is required or distributed.
 
 ## Descriptive Figures
 
+For the supplied manuscript artwork, use the
+[current Figure 1-10 gallery](../figures/manuscript_v2/README.md). Those PNGs are
+lossless extractions of the author-supplied embedded figures, not regenerated
+outputs of the statistical plotting command below. The original plotting
+utilities and statistical tables are retained for reproducibility. Figure 8
+uses original paired source rectangles, not clipped canonical targets.
+
 The figure generator additionally needs NumPy, Matplotlib and Pillow.
 It reads manifests and the original frozen YOLO label bytes. It can verify
 EXIF-aware image dimensions from retained files.
@@ -76,6 +83,11 @@ All existing train, validation and test samples contribute to these descriptive
 figures; they are not held-out model-performance results.
 
 ## Scope and Publication Status
+
+The manuscript's [held-out benchmark table](benchmarks.md) is provided separately
+from descriptive data statistics. Validation and plotting do not rerun those
+model evaluations. Selected detection examples and native P/R operating points
+must not be confused with whole-test metrics.
 
 Tests and schemas are part of the validation tools. They do not depend on
 manuscript drafts, authoring templates, private uploader scripts or duplicate

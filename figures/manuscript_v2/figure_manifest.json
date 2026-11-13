@@ -1,0 +1,117 @@
+{
+  "source_manuscript_sha256": "8c9d9dd476d7999158ce2bf1a9f3e539a458a54473134e4f81c2c9b9bc334587",
+  "extracted_on": "2026-11-13",
+  "conversion": "Original embedded TIFFs decoded to RGB and stored as lossless PNG at original dimensions; no cropping, resizing or retouching.",
+  "figures": [
+    {
+      "number": 1,
+      "path": "Figure01.png",
+      "caption_in_manuscript": "Fig. 1. Overall pipeline of the unified single- and multi-modal fire and smoke dataset construction: (1) data sources, (2) data curation and deduplication, (3) sensor calibration and optical–thermal image registration, (4) semi-supervised annotation and expert review, and (5) released datasets.",
+      "embedded_media": "image1.tiff",
+      "embedded_media_sha256": "76fe24420d8204bc27f448a02ed84a771848b42fbba34e0e0a1dfc203feb0c87",
+      "png_sha256": "8b23205a7f133395d46e29c9c970653ee3c007fbc8f059936169ea354f63f6fe",
+      "width": 1351,
+      "height": 1939,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 2,
+      "path": "Figure02.png",
+      "caption_in_manuscript": "Fig. 2. Measurement configuration and data acquisition environments: (a) hardware configuration, (b) real-world experimental setup, and (c) virtual environments for synthetic optical–thermal data generation.",
+      "embedded_media": "image2.tiff",
+      "embedded_media_sha256": "6f7ec7e7d5c559a6bd69e1bd622dedd5df0bd39614f6924de47908a73e00d72a",
+      "png_sha256": "f51cbfc2a53fd9d88d791433164015b20481e29d1905ae7b5db633ee1054664b",
+      "width": 1326,
+      "height": 1540,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 3,
+      "path": "Figure03.png",
+      "caption_in_manuscript": "Fig. 3. Flowchart of dataset curation and deduplication: (a) overall curation pipeline for single-modal optical and multi-modal optical–thermal datasets, and (b) four-stage deduplication algorithm comprising.",
+      "embedded_media": "image3.tiff",
+      "embedded_media_sha256": "f17238035e23b68c8e69f50cccd1b98208bf63213b2f35a31652007519325bdd",
+      "png_sha256": "d3179bf65bbe7ed818105bfc7a1d5961e6d88460c115fcff15c276b4409c3849",
+      "width": 1429,
+      "height": 1625,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 4,
+      "path": "Figure04.png",
+      "caption_in_manuscript": "Fig. 4. Optical–thermal image registration based on sensor calibration: (a) intrinsic calibration, (b) extrinsic calibration, and (c) optical–thermal image registration.",
+      "embedded_media": "image4.tiff",
+      "embedded_media_sha256": "8f77e7b5fa27c500f49c0545812ec93053c3c69f8a7ae83c9bc6f100a646b55e",
+      "png_sha256": "fa4a785ea9fa335a0e332eadb9897ac02d1475a2cd1ce8209c6d34dee625ddf6",
+      "width": 1429,
+      "height": 705,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 5,
+      "path": "Figure05.png",
+      "caption_in_manuscript": "Fig. 5. Semi-supervised data annotation and expert review: (a) initial annotation, (b) auto-labeling through semi-supervised object detector, and (c) expert review.",
+      "embedded_media": "image5.tiff",
+      "embedded_media_sha256": "7557d26d96ecb401e176fee40f4b5fcb7b7790c0ad538692214a252c54151d7e",
+      "png_sha256": "4d27e9f3dda35a7df3e77d1b87ece7d51857982dded1ced05b37eab0b6843e43",
+      "width": 1428,
+      "height": 807,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 6,
+      "path": "Figure06.png",
+      "caption_in_manuscript": "Fig. 6. Data structures of the (a) unified single-modal optical dataset and (b) multi-modal optical–thermal dataset. ",
+      "embedded_media": "image6.tiff",
+      "embedded_media_sha256": "689f65db9ae11ba4791a75ed50ece893d53ad5b87b136e1b665c48d120381183",
+      "png_sha256": "b1dfaa7b3270f8a6061743ef07a2794da08e3ed5f607778c16e1972a2c3db6c2",
+      "width": 1431,
+      "height": 1054,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 7,
+      "path": "Figure07.png",
+      "caption_in_manuscript": "Fig. 7. Representative images and bounding-box annotations in UniFSD: (a) unified single-modal optical dataset and (b) paired multi-modal optical–thermal dataset comprising real-world and synthetic image pairs.",
+      "embedded_media": "image7.tiff",
+      "embedded_media_sha256": "1e63b4e82a7f3e05b506802a99782301a843a6fc4ccdbf70702160323869d1c1",
+      "png_sha256": "66adfa8057f55da3a30e812d7289b01b411b37de2a4318910d0154350f5683e8",
+      "width": 1430,
+      "height": 761,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 8,
+      "path": "Figure08.png",
+      "caption_in_manuscript": "Fig. 8. Distributions of normalized bounding-box dimensions in UniFSD: single-modal optical dataset annotations of (a) fire and (b) smoke, and multi-modal optical–thermal dataset annotations of (c) fire and (d) smoke. ",
+      "embedded_media": "image8.tiff",
+      "embedded_media_sha256": "aa0c6dd291076c0c129ba403c0d650088aeec0ef30897b73ccd0d91d089f9449",
+      "png_sha256": "6b92e211a040606e19700be0f2901b0a0f6d8bdf399e83b05bc02ca4a0004546",
+      "width": 1430,
+      "height": 1217,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 9,
+      "path": "Figure09.png",
+      "caption_in_manuscript": "Fig. 9. Calibration-target feature detection and optical–thermal registration results: (a) optical–LiDAR calibration, (b) thermal–LiDAR calibration, (c) marker–corner correspondence comparison, and (d) optical–thermal registration overlay.",
+      "embedded_media": "image9.tiff",
+      "embedded_media_sha256": "9b35f71207ed11d2d688a2523418a6725c41ed48013e434eec18c6764acca4a8",
+      "png_sha256": "bdda8153355034cbae2861820a3925e1882daa1725284feed27e4094d365de1e",
+      "width": 1431,
+      "height": 928,
+      "rgb_pixels_unchanged": true
+    },
+    {
+      "number": 10,
+      "path": "Figure10.png",
+      "caption_in_manuscript": "Fig. 10. Qualitative detection results on UniFSD: (a) single-modal optical dataset and (b) multi-modal optical–thermal dataset with real-world and synthetic image pairs. ",
+      "embedded_media": "image10.tiff",
+      "embedded_media_sha256": "50e87dfd19c88dda0a4448591b79126865e91542cedee3bddb6af8d3f346b6e3",
+      "png_sha256": "02445db51a67ed9d0bc076c15621c52a24a75a40d19168bc43bc922d492b69e9",
+      "width": 1429,
+      "height": 925,
+      "rgb_pixels_unchanged": true
+    }
+  ]
+}

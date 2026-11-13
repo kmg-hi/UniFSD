@@ -1,5 +1,22 @@
 # Changelog
 
+## Manuscript v2 Documentation and Figures - 2026-11-13
+
+- Add all ten original embedded manuscript figures as lossless, pixel-verified
+  PNGs, a figure index, captions and an image provenance manifest.
+- Link the current annotation, directory, distribution and detection figures
+  from user documentation; retain earlier reproducible statistical designs and
+  editable directory sources as explicitly historical material.
+- Add the manuscript's nine completed-test rows with full model variant names,
+  a CSV table, native P/R conventions and selected-example limitations.
+- Expand acquisition, curation and annotation notes without changing frozen
+  data or presenting proxy timing results as measurements of the released pairs.
+- Keep actual `public optical/` and `paired_RGBT/` roots, every dataset metadata
+  file, image/label archive, split assignment and hash unchanged. The optical
+  root label in manuscript Figure 6 is a schematic discrepancy, not a rename.
+- Preserve private visibility and unresolved licensing/publication status.
+  No manuscript DOCX, private review files, training or evaluation is uploaded.
+
 ## Repository Name - 2026-11-11
 
 - Rename the existing repository to kmg-hi/UniFSD without transferring ownership

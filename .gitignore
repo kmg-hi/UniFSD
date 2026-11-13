@@ -27,3 +27,4 @@ __pycache__/
 **/registration.public.json
 !figures/directory_structure/Figure6_20261109.png
 !figures/data_overview/*.png
+!figures/manuscript_v2/*.png

@@ -1,6 +1,6 @@
 # 데이터셋 폴더 구조와 Metadata
 
-기준: 2026-11-09 배포 구성 수정본.
+기준: 2026-11-09 동결 배포 구성 및 2026-11-13 원고 v2 문서 대조.
 
 이 문서는 데이터 폴더, metadata와 GitHub 다운로드 구조를 설명합니다.
 저장소와 데이터 ZIP은 비공개 준비본입니다. 공개 배포 권한이나 최종 라이선스가
@@ -77,9 +77,14 @@ paired_RGBT/
 `-- PAYLOAD_FILES.csv
 ```
 
-구조도는 위 구조의 핵심 경로를 보여주는 개요도이며, 모든 보조 파일을
-열거한 그림은 아닙니다. [편집 가능한 그림](../figures/directory_structure/Figure6_Editable_Directory_Structure_20261109.pptx)과
-[그림 미리보기](../figures/directory_structure/Figure6_20261109.png)에서 확인할 수 있습니다.
+구조도는 핵심 경로를 보여주는 개요도이며 모든 보조 파일을 열거하지 않습니다.
+[최신 원고 Figure 6](../figures/manuscript_v2/Figure06.png)을 제공하지만,
+그림의 `public_optical/` 표기와 달리 실제 압축파일의 최상위 경로는
+공백이 있는 `public optical/`입니다. 쌍 데이터의 경로는 `paired_RGBT/`입니다.
+그림에 맞추기 위해 실제 경로나 manifest를 바꾸지 마세요.
+[전체 그림과 해석 주의사항](../figures/manuscript_v2/README.md)을 함께 확인하세요.
+기존 [2026-11-09 편집본](../figures/directory_structure/Figure6_Editable_Directory_Structure_20261109.pptx)은
+이전 구조도이며 최신 원고 그림의 편집본은 아닙니다.
 
 ## 3. Metadata 파일별 내용
 

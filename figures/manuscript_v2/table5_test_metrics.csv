@@ -1,0 +1,10 @@
+record,model,input,test_samples,precision,recall,map50,map50_95
+public_optical_release_v1,Faster R-CNN,Optical,9374,0.7293,0.6202,0.6915,0.3958
+public_optical_release_v1,RetinaNet,Optical,9374,0.7452,0.6024,0.6889,0.4001
+public_optical_release_v1,RT-DETR-L,Optical,9374,0.7371,0.6285,0.7078,0.4452
+public_optical_release_v1,YOLOv9-C,Optical,9374,0.7417,0.6487,0.7324,0.4784
+paired_rgbt_v1,YOLOv9-T,Optical only,3524,0.8758,0.9116,0.9567,0.7807
+paired_rgbt_v1,YOLOv9-T,Thermal only,3524,0.8486,0.9099,0.9345,0.6217
+paired_rgbt_v1,YOLO11n-RGBT,Optical + thermal,3524,0.9147,0.9108,0.9664,0.8129
+paired_rgbt_v1,DEYOLO-n,Optical + thermal,3524,0.9008,0.9197,0.9653,0.8101
+paired_rgbt_v1,DAMSDet R50-vd,Optical + thermal,3524,0.8058,0.9676,0.9614,0.7831

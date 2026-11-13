@@ -9,9 +9,21 @@ The repository contains documentation, metadata, frozen split assignments and
 read-only validation tools. Images and labels are distributed as separate ZIP
 attachments, not ordinary Git files.
 
+Companion to the manuscript *Unified single- and multi-modal fire and smoke
+datasets with optical and thermal images for vision research* by Min-Gwan Kim
+and Ki-Yong Oh, Hanyang University. The documentation and
+[manuscript figure gallery](figures/manuscript_v2/README.md) were updated against
+the supplied v2 manuscript on 13 November 2026. The manuscript file itself is not
+distributed in this repository.
+
 **Status:** author-approved private distribution. The repository and dataset
 drafts remain private. Public redistribution rights, final licences, author
 information and dataset DOIs are still under review.
+
+The Zenodo draft identifiers supplied for the optical and paired records are
+`10.5281/zenodo.24182273` and `10.5281/zenodo.24182393`, respectively. Their public
+availability was not independently verified for this documentation update;
+reserved identifiers are not evidence of publication.
 
 ## Datasets
 
@@ -34,6 +46,13 @@ or 71,718 image views, from 66 real and 21 synthetic experiments.
 Each pair preserves optical/thermal correspondence. Optic-only and thermal-only
 experiments on this record use the same pair membership and targets.
 They are **not** the separate 86,563-image optical record.
+
+![Representative optical and paired optical-thermal images with annotations, manuscript Figure 7](figures/manuscript_v2/Figure07.png)
+
+Representative annotations are shown above. Empty labels mean no annotated
+objects, not independently verified absence of every fire or smoke phenomenon.
+Thermal views are processed colour images rather than calibrated temperature
+measurements.
 
 ## Download
 
@@ -93,12 +112,19 @@ image paths. Preserve these frozen assignments for benchmark reproduction.
 
 ## Documentation and Figures
 
+- [Current manuscript figures 1-10 and interpretation notes](figures/manuscript_v2/README.md)
+- [Completed held-out test benchmarks and evaluation conventions](docs/benchmarks.md)
 - [Folder structure and metadata](docs/DATASET_STRUCTURE_AND_METADATA.md)
 - [Manifest field definitions](docs/data_dictionary.md)
 - [Curation methods and limitations](docs/methods_and_validation.md)
 - [Download, validation and figure reproduction](docs/usage_and_validation.md)
-- [Dataset overview figures and underlying statistics](figures/data_overview/README.md)
-- [Directory-structure figure](figures/directory_structure/Figure6_20261109.png)
+- [Reproducible overview statistics and earlier figure designs](figures/data_overview/README.md)
+- [Current manuscript directory illustration](figures/manuscript_v2/Figure06.png)
+
+**Path convention:** manuscript Figure 6 displays `public_optical/` as its optical
+root label. The actual archive root is `public optical/` with a space. The paired
+archive root is exactly `paired_RGBT/`. Do not rename the extracted roots to match
+a schematic label. File inventories and manifests are authoritative.
 
 `schemas/` defines manifest fields; `scripts/` and `tests/` provide
 read-only checks and descriptive figure generation. `metadata/` retains source,

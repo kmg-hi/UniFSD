@@ -1,5 +1,12 @@
 # Dataset Overview Figures
 
+The current manuscript's redesigned box-size figure is
+[Figure 8 in the v2 gallery](../manuscript_v2/Figure08.png). The figures below
+retain the earlier reproducible designs and their underlying statistics; they
+are not all numbered figures in the latest manuscript. The source-versus-canonical
+area comparison remains a supplementary diagnostic, not an additional main-text
+panel that users must include.
+
 Descriptive statistics of the frozen records. All train/validation/test samples
 are included. These figures are not model-performance or annotation-accuracy
 measurements. Existing images, labels, metadata and split assignments are unchanged.
