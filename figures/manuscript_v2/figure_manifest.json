@@ -1,5 +1,5 @@
 {
-  "source_manuscript_sha256": "8c9d9dd476d7999158ce2bf1a9f3e539a458a54473134e4f81c2c9b9bc334587",
+  "source_manuscript_sha256": "bbb63466327163a4660ab80e91e51685768e7b339fa675ab7b379211cdc923dc",
   "extracted_on": "2026-11-13",
   "conversion": "Original embedded TIFFs decoded to RGB and stored as lossless PNG at original dimensions; no cropping, resizing or retouching.",
   "figures": [
@@ -107,8 +107,8 @@
       "path": "Figure10.png",
       "caption_in_manuscript": "Fig. 10. Qualitative detection results on UniFSD: (a) single-modal optical dataset and (b) multi-modal optical–thermal dataset with real-world and synthetic image pairs. ",
       "embedded_media": "image10.tiff",
-      "embedded_media_sha256": "50e87dfd19c88dda0a4448591b79126865e91542cedee3bddb6af8d3f346b6e3",
-      "png_sha256": "02445db51a67ed9d0bc076c15621c52a24a75a40d19168bc43bc922d492b69e9",
+      "embedded_media_sha256": "8de2aa89b93a52d778e2911810fa66f30900bdf5fa411046a480104bad344596",
+      "png_sha256": "06cba89f7068c42c5094f8039f64d1353a58df12be80d1ae0d585a7490e5edb4",
       "width": 1429,
       "height": 925,
       "rgb_pixels_unchanged": true

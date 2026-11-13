@@ -50,9 +50,9 @@ counts are:
 | Total | 136,305 | 1,319 | 20 | 56 | 41,952 | 6,395 | 86,563 |
 
 The six NEWFire2 cross-source removals are required for the row and total to
-reconcile; a dash in that cell of manuscript Table 3 is not a zero in the
-underlying records. No additional, separately quantified public optical
-relevance-review removal count is asserted by this table.
+reconcile and are included in the latest author-saved Table 3. No additional,
+separately quantified public optical relevance-review removal count is asserted
+by this table.
 
 ## multi-modal optical–thermal paired dataset: real/synthetic construction
 

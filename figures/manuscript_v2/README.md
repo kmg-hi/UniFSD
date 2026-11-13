@@ -123,9 +123,8 @@ measurement or proof of uniformly accurate registration at every depth.
 
 Public optical models share the same test image. Paired comparisons share the
 same real or synthetic pair, with fusion predictions displayed on the optical
-view and thermal-only predictions on the registered thermal view. The supplied
-panel (b) heading abbreviates the paired record as "multi-modal optical"; the
-actual model inputs and dataset are optical-thermal.
+view and thermal-only predictions on the registered thermal view. The latest
+author-saved panel (b) heading explicitly identifies the optical-thermal dataset.
 
 These are purposively selected examples, not a random or statistically
 representative sample. Display confidence is at least 0.50. The paired examples
